@@ -1,0 +1,9 @@
+NAME           STORE windowapi
+DESCRIPTION    'Storing/restoring a window position'
+PROTMODE
+HEAPSIZE       12288
+STACKSIZE      20480
+
+EXPORTS
+    ClientWndProc
+

@@ -1,0 +1,11 @@
+NAME           DROP WINDOWAPI
+DESCRIPTION    'DROP example'
+PROTMODE
+HEAPSIZE       12288
+STACKSIZE      16384
+
+EXPORTS
+ClientWndProc
+FrameWndProc
+
+

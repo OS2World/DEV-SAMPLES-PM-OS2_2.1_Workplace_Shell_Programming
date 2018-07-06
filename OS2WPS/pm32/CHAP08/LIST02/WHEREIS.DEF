@@ -1,0 +1,18 @@
+;-----------------------------------
+; whereis.DEF module definition file
+;-----------------------------------
+
+; Stefano Maruzzi 1991
+
+
+NAME               whereis
+DESCRIPTION    'Ricercare un file'
+PROTMODE
+
+HEAPSIZE       12000
+STACKSIZE      8192
+
+EXPORTS
+        ClientWndProc
+        YesNoProc
+

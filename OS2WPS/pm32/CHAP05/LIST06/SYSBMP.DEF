@@ -1,0 +1,10 @@
+NAME           SYSBMP
+DESCRIPTION    'System bitmaps'
+PROTMODE
+
+HEAPSIZE       12288
+STACKSIZE      20480
+
+EXPORTS
+    ClientWndProc
+

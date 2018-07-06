@@ -1,0 +1,9 @@
+NAME           ACCEL
+DESCRIPTION    'Adding accelerators'
+PROTMODE
+HEAPSIZE       12288
+STACKSIZE      20480
+
+EXPORTS
+    ClientWndProc
+

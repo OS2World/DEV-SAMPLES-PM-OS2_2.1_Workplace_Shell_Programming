@@ -1,0 +1,9 @@
+NAME           NOTEBOOK
+DESCRIPTION    'A notebook window'
+PROTMODE
+HEAPSIZE       12288
+STACKSIZE      20480
+
+EXPORTS
+    ClientWndProc
+

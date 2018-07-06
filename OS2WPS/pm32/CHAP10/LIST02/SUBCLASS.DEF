@@ -1,0 +1,10 @@
+NAME            SUBCLASS
+DESCRIPTION     'Subclassing a WC_ENTRYFIELD window'
+PROTMODE
+HEAPSIZE        12880
+STACKSIZE       20480
+
+EXPORTS
+    ClientWndProc
+    MyWndProc
+

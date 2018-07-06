@@ -1,0 +1,30 @@
+DLGINCLUDE 1 "prespar.h"
+
+DLGTEMPLATE DL_PRES LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Presentation params", DL_PRES, 42, 10, 155, 111, FS_NOBYTEALIGN | 
+            WS_VISIBLE, FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        PUSHBUTTON      "Enable", DL_ENABLE, 9, 12, 38, 13, WS_DISABLED
+        PUSHBUTTON      "Disable", DL_DISABLE, 51, 12, 38, 13
+        DEFPUSHBUTTON   "~OK", DID_OK, 113, 30, 38, 13
+        PUSHBUTTON      "~Cancel", MN_FILE, 113, 12, 38, 13
+        LISTBOX         DL_LIST, 9, 55, 142, 43, LS_MULTIPLESEL | WS_GROUP
+        ENTRYFIELD      "Sample text", DL_ENTRY, 11, 29, 76, 10, NOT 
+                        ES_AUTOSCROLL | ES_MARGIN | WS_GROUP
+        LTEXT           "Listbox", -1, 9, 97, 33, 8, DT_VCENTER
+        LTEXT           "Entryfield", -1, 10, 41, 70, 8, DT_VCENTER
+    END
+END
+
+DLGTEMPLATE DL_PRODINFO LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG "Product information", DL_PRODINFO, 60, 68, 177, 45, FS_NOBYTEALIGN, FCF_TITLEBAR
+    BEGIN
+        CONTROL RS_ALL, 0, 2, 14, 22, 19, WC_STATIC, SS_BITMAP | WS_VISIBLE
+        LTEXT "IBM OS/2 2.1 WPS Programming", -1, 38, 28, 134, 8
+        LTEXT "Stefano Maruzzi 1993", -1, 38, 14, 93, 8
+        DEFPUSHBUTTON   "~OK", DID_OK, 131, 14, 40, 10, WS_GROUP
+    END
+END
+

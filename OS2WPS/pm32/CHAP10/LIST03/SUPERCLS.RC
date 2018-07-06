@@ -1,0 +1,8 @@
+// SUPERCLS.RC
+// Listing 10-02
+
+#include "supercls.h"
+
+ICON RS_ICON SUPERCLS.ICO
+
+

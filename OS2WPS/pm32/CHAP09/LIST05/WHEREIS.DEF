@@ -1,0 +1,14 @@
+NAME            whereis WINDOWAPI
+DESCRIPTION    'WHEREIS multithreaded'
+PROTMODE
+
+HEAPSIZE       48000
+STACKSIZE      48000
+
+EXPORTS
+    ClientWndProc
+    YesNoProc
+    SPWndProc
+    ListWndProc
+    TMWndProc
+

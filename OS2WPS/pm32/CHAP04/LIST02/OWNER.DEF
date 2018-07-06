@@ -1,0 +1,10 @@
+NAME           OWNER
+DESCRIPTION    'Ownership'
+PROTMODE
+HEAPSIZE       12288
+STACKSIZE      20480
+
+EXPORTS
+    ClientWndProc1
+    ClientWndProc2
+

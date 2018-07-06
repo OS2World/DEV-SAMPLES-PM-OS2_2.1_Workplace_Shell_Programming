@@ -1,0 +1,41 @@
+# IBM Developer's Workframe/2 Make File Creation run at 22:13:22 on 07/25/93
+
+# Make File Creation run in directory:
+#   F:\PM32\CHAP07\LIST10;
+
+# Assumed INCLUDE environment variable path:
+#   F:\TOOLKT21\C\OS2H;
+#   F:\TOOLKT21\ASM\OS2INC;
+#   F:\IBMCPP\INCLUDE;
+#   F:\IBMCPP\IBMCLASS;
+
+
+INCLUDE002=.
+INCLUDE002=$(INCLUDE002);$(INCLUDE)
+
+INCLUDE001=.
+INCLUDE001=$(INCLUDE001);$(INCLUDE)
+
+INCLUDE000=$(INCLUDE)
+
+
+NOTEBOOK.RES:  NOTEBOOK.RC  \
+   {$(INCLUDE002)}NOTEBOOK.H  \
+   NOTEBOOK.ICO  \
+   FLAG01.BMP  \
+   FLAG02.BMP  \
+   FLAG03.BMP  \
+   FLAG04.BMP  \
+   FLAG05.BMP  \
+   MAST01.BMP  \
+   MAST02.BMP  \
+   MAST03.BMP  \
+   MAST04.BMP  \
+   MAST05.BMP  \
+   NOTEBOOK.MAK
+
+NOTEBOOK.OBJ:  NOTEBOOK.C  \
+#  {$(INCLUDE000)}os2.h  \
+#  {$(INCLUDE000)}stdio.h  \
+   {$(INCLUDE001)}notebook.h  \
+   NOTEBOOK.MAK

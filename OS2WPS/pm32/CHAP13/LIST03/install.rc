@@ -1,0 +1,27 @@
+// INSTALL.RC
+// Listing 13-03
+
+#define INCL_WIN
+
+#include <os2.h>
+#include "install.h"
+
+MENU RS_MENU
+{
+    SUBMENU "~File" , MN_FILE
+    {
+        MENUITEM "~Install", MN_INSTALL
+        MENUITEM "E~xit", MN_EXIT
+        MENUITEM SEPARATOR
+        MENUITEM "~Product information", MN_PRODINFO
+    }
+}
+
+ICON RS_ICON INSTALL.ICO
+ICON RS_INSTFOLD INSTFOLD.ICO
+
+STRINGTABLE
+{
+    ST_WINDOWTITLE, "A WPS install program"
+}
+

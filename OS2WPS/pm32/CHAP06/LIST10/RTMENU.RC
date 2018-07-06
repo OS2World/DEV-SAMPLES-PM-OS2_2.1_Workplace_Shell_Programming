@@ -1,0 +1,15 @@
+// RTMENU.RC
+// Listing 06-10
+
+#define INCL_WIN
+#include <os2.h>
+#include "rtmenu.h"
+
+ICON RS_ICON rtmenu.ico
+
+STRINGTABLE
+{
+    ST_CLASSNAME, "RTMENU"
+    ST_WINDOWTITLE, "Run-time menu"
+}
+

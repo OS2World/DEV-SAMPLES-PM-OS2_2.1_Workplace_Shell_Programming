@@ -1,0 +1,133 @@
+// CNTXT.RC
+// Listing 06-11
+
+#define INCL_WIN
+#include <os2.h>
+#include "cntxt.h"
+
+
+ICON RS_ICON CNTXT.ICO
+BITMAP 100 CNTXT.BMP
+
+
+MENU RS_MENU
+{
+    SUBMENU "~File" , MN_FILE
+    {
+        MENUITEM "~New", MN_NEW
+        MENUITEM "~Open", MN_OPEN
+        MENUITEM "~Save", MN_SAVE,, MIA_DISABLED
+        MENUITEM "Save ~As...", MN_SAVEAS,, MIA_DISABLED
+        MENUITEM SEPARATOR
+        MENUITEM "E~xit", MN_EXIT
+    }
+    SUBMENU "~Edit" , MN_EDIT
+    {
+           MENUITEM "~Undo\tAlt+Backspace", MN_UNDO     // ,, MIA_DISABLED
+           MENUITEM "~Redo\tShift+Alt+backspace", MN_REDO,, MIA_DISABLED
+           MENUITEM SEPARATOR
+           MENUITEM "Cu~t\tShift+Delete", MN_CUT,, MIA_DISABLED
+           MENUITEM "~Copy\tCtrl+Insert", MN_COPY,, MIA_DISABLED
+           MENUITEM "~Paste\tShift+Insert", MN_PASTE,, MIA_DISABLED
+           MENUITEM SEPARATOR
+           MENUITEM "~Delete\tDelete", MN_DELETE,, MIA_DISABLED
+           MENUITEM SEPARATOR
+           MENUITEM "~Find...", MN_FIND,, MIA_DISABLED
+           MENUITEM "~Select all\tCtrl+/", MN_SELECTALL,, MIA_DISABLED
+           MENUITEM "~Deselect all\tCtrl+\\", MN_DESELECTALL,, MIA_DISABLED
+    }
+    SUBMENU "~Help", MN_HELP
+    {
+        MENUITEM "Help ~index", MN_HELP1, MIS_HELP
+        MENUITEM "~General help", MN_HELP2, MIS_HELP
+        MENUITEM "~Using help", MN_HELP3, MIS_HELP
+        MENUITEM "~Keys help", MN_HELP4, MIS_HELP
+        MENUITEM SEPARATOR
+        MENUITEM "~Product information", MN_PRODINFO
+    }
+}
+
+MENU RS_TBMENU
+{
+   SUBMENU "#100", 0x8002, MIS_BITMAP
+   {
+       SUBMENU "~Open", PM_OPEN
+       {
+           MENUITEM "Settings", MN_SETTINGS,, MIA_CHECKED
+           MENUITEM "~Icon view", MN_ICONVIEW
+       }
+       SUBMENU "~Help", PM_HELP
+       {
+            MENUITEM "Help ~index", MN_HELP1
+            MENUITEM "~General help", MN_HELP2,, MIA_CHECKED
+            MENUITEM "~Using help", MN_HELP3
+            MENUITEM "~Keys help", MN_HELP4
+            MENUITEM SEPARATOR
+            MENUITEM "~Product information", MN_PRODINFO
+       }
+       MENUITEM SEPARATOR
+
+       SUBMENU "~Create another", PM_CREATEAN
+       {
+           MENUITEM "Default", MN_DEFAULT,, MIA_CHECKED
+           MENUITEM "~Editor", MN_EDITOR
+       }
+       MENUITEM "~Copy...", PM_COPY
+       MENUITEM "~Move...", PM_MOVE
+       MENUITEM "Create ~shadow...", PM_SHADOW
+       MENUITEM "~Delete...", PM_DELETE
+       SUBMENU "~Edit", MN_EDIT
+       {
+           MENUITEM "~Undo\tAlt+Backspace", MN_UNDO,, MIA_DISABLED
+           MENUITEM "~Redo\tShift+Alt+backspace", MN_REDO,, MIA_DISABLED
+           MENUITEM SEPARATOR
+           MENUITEM "Cu~t\tShift+Delete", MN_CUT,, MIA_DISABLED
+           MENUITEM "~Copy\tCtrl+Insert", MN_COPY,, MIA_DISABLED
+           MENUITEM "~Paste\tShift+Insert", MN_PASTE,, MIA_DISABLED
+           MENUITEM SEPARATOR
+           MENUITEM "~Delete\tDelete", MN_DELETE,, MIA_DISABLED
+           MENUITEM SEPARATOR
+           MENUITEM "~Find...", MN_FIND,, MIA_DISABLED
+           MENUITEM "~Select all\tCtrl+/", MN_SELECTALL,, MIA_DISABLED
+           MENUITEM "~Deselect all\tCtrl+\\", MN_DESELECTALL,, MIA_DISABLED
+       }
+       MENUITEM SEPARATOR
+
+       SUBMENU "Window", MN_WINDOW
+       {
+           MENUITEM "~Restore\tAlt+F5", SC_RESTORE, MIS_SYSCOMMAND
+           MENUITEM "~Move\tAlt+F7", SC_MOVE, MIS_SYSCOMMAND
+           MENUITEM "~Size\tAlt+F8", SC_SIZE, MIS_SYSCOMMAND
+           MENUITEM "Mi~nimize\tAlt+F9", SC_MINIMIZE, MIS_SYSCOMMAND
+           MENUITEM "Ma~ximize\tAlt+F10", SC_MAXIMIZE, MIS_SYSCOMMAND
+           MENUITEM "~Hide\tAlt+F11", SC_HIDE, MIS_SYSCOMMAND
+           MENUITEM SEPARATOR
+           MENUITEM "~Close\tAlt+F4", SC_CLOSE, MIS_SYSCOMMAND
+           MENUITEM SEPARATOR
+           MENUITEM "Window lis~t\tCtrl+Esc", SC_TASKMANAGER, MIS_SYSCOMMAND
+       }
+       MENUITEM SEPARATOR
+       MENUITEM "Close", SC_CLOSE, MIS_SYSCOMMAND
+
+   }
+}
+
+ACCELTABLE RS_ACCELTABLE
+{
+    VK_BACKSPACE,   MN_UNDO,        VIRTUALKEY, ALT
+    VK_BACKSPACE,   MN_REDO,        VIRTUALKEY, ALT, SHIFT
+    VK_DELETE,      MN_CUT,         VIRTUALKEY, SHIFT
+    VK_INSERT,      MN_COPY,        VIRTUALKEY, CONTROL
+    VK_INSERT,      MN_PASTE,       VIRTUALKEY, SHIFT
+    VK_DELETE,      MN_DELETE,      VIRTUALKEY
+    "/",            MN_SELECTALL,   CHAR, CONTROL
+    "\\",           MN_DESELECTALL, CHAR, CONTROL
+}
+
+
+STRINGTABLE
+{
+    ST_CLASSNAME, "CNTXT"
+    ST_WINDOWTITLE, "Window context menu"
+}
+

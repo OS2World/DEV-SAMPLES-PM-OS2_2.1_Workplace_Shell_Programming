@@ -1,0 +1,32 @@
+# IBM Developer's Workframe/2 Make File Creation run at 20:14:22 on 07/25/93
+
+# Make File Creation run in directory:
+#   F:\PM32\CHAP05\LIST08;
+
+# Assumed INCLUDE environment variable path:
+#   F:\TOOLKT21\C\OS2H;
+#   F:\TOOLKT21\ASM\OS2INC;
+#   F:\IBMCPP\INCLUDE;
+#   F:\IBMCPP\IBMCLASS;
+
+
+INCLUDE002=.
+INCLUDE002=$(INCLUDE002);$(INCLUDE)
+
+INCLUDE001=.
+INCLUDE001=$(INCLUDE001);$(INCLUDE)
+
+INCLUDE000=$(INCLUDE)
+
+
+BITMAP.RES:  BITMAP.RC  \
+#  {$(INCLUDE002)}OS2.H  \
+   {$(INCLUDE002)}BITMAP.H  \
+   STEVE.BMP  \
+   BITMAP.ICO  \
+   BITMAP.MAK
+
+BITMAP.OBJ:  BITMAP.C  \
+#  {$(INCLUDE000)}os2.h  \
+   {$(INCLUDE001)}bitmap.h  \
+   BITMAP.MAK

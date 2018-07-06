@@ -1,0 +1,9 @@
+NAME           ASSOCT
+DESCRIPTION    'AssocTable'
+PROTMODE
+HEAPSIZE       12280
+STACKSIZE      20480
+
+EXPORTS
+ClientWndProc
+

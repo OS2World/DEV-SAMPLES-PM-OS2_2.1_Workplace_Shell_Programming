@@ -1,0 +1,40 @@
+# IBM Developer's Workframe/2 Make File Creation run at 12:05:11 on 10/06/93
+
+# Make File Creation run in directory:
+#   C:\PM32BK\CHAP09\LIST05;
+
+# Assumed INCLUDE environment variable path:
+#   C:\IBMCPP\INCLUDE;
+#   C:\TOOLKT20\C\OS2H;
+#   C:\TOOLKT20\ASM\OS2INC;
+
+
+INCLUDE002=.
+INCLUDE002=$(INCLUDE002);$(INCLUDE)
+
+INCLUDE001=.
+INCLUDE001=$(INCLUDE001);$(INCLUDE)
+
+INCLUDE000=$(INCLUDE)
+
+
+WHEREIS.RES:  WHEREIS.RC  \
+#  {$(INCLUDE002)}OS2.H  \
+   {$(INCLUDE002)}WHEREIS.H  \
+   WHEREIS.ICO  \
+   WHEREIS.MAK
+
+WHERE.OBJ:  WHERE.C  \
+#  {$(INCLUDE000)}os2.h  \
+#  {$(INCLUDE000)}stdio.h  \
+#  {$(INCLUDE000)}string.h  \
+   {$(INCLUDE001)}whereis.h  \
+   WHEREIS.MAK
+
+WHEREIS.OBJ:  WHEREIS.C  \
+#  {$(INCLUDE000)}os2.h  \
+#  {$(INCLUDE000)}stdio.h  \
+#  {$(INCLUDE000)}string.h  \
+#  {$(INCLUDE000)}process.h  \
+   {$(INCLUDE001)}whereis.h  \
+   WHEREIS.MAK

@@ -1,0 +1,15 @@
+NAME           FOLDER
+DESCRIPTION    'WC_CONTAINER example'
+PROTMODE
+HEAPSIZE       12288
+STACKSIZE      8192
+
+
+EXPORTS
+FrameWndProc
+ClientWndProc
+RedWndProc
+GreenWndProc
+BlueWndProc
+
+

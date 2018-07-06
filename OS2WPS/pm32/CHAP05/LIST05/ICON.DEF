@@ -1,0 +1,10 @@
+NAME           ICON
+DESCRIPTION    'Ttilebar menu with an icon'
+PROTMODE
+
+HEAPSIZE       12288
+STACKSIZE      20480
+
+EXPORTS
+    ClientWndProc
+

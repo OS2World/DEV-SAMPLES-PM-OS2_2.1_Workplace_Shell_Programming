@@ -1,0 +1,23 @@
+// SYSDLLS.RC
+// Listing 10-08
+
+
+#include "sysdlls.h"
+
+POINTER RS_ICON SYSDLLS.ICO
+
+STRINGTABLE
+{
+    ST_CLASSNAME, "SYSDLLS"
+    ST_WINDOWTITLE, "SYS_DLLS - LoadPerProcess"
+}
+
+ACCELTABLE RS_ACCELTABLE
+{
+    "A", CT_ADD, ALT
+    "a", CT_ADD, ALT
+    "R", CT_REMOVE, ALT
+    "r", CT_REMOVE, ALT
+
+}
+

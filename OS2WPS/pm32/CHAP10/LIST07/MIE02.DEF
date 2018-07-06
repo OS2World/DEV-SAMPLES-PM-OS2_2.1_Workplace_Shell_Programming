@@ -1,0 +1,16 @@
+LIBRARY         MIE02 INITINSTANCE TERMINSTANCE
+DESCRIPTION     'MIE02.DLL'
+PROTMODE
+
+DATA SHARED
+HEAPSIZE        20480
+
+EXPORTS
+        MieColorClient
+        MieCenterDlg
+        MieDlgWnd
+        MieEmphasizeWindow
+        ProdInfoDlgProc
+        InitTweny
+        TwenyWndProc
+

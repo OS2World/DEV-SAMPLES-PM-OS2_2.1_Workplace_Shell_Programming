@@ -1,0 +1,66 @@
+// SPIN.RC
+// Listing 07-13
+
+
+#define INCL_WIN
+#include <os2.h>
+#include "spin.h"
+
+MENU RS_MENU
+{
+    SUBMENU "~File" , MN_FILE
+    {
+        MENUITEM "~New" , MN_NEW
+        MENUITEM "~Open", MN_OPEN
+        MENUITEM "~Save", MN_SAVE,, MIA_DISABLED
+        MENUITEM "Save ~As..." , MN_SAVEAS,, MIA_DISABLED
+        MENUITEM SEPARATOR
+        MENUITEM "E~xit", MN_EXIT
+        MENUITEM "~Product Information", MN_PRODINFO
+    }
+
+    SUBMENU "~Edit" , MN_EDIT
+    {
+        MENUITEM "~Undo\tAlt+Bksp" , MN_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "~Cut\tShift+Del", MN_CUT
+        MENUITEM "Co~py\tShift+Ins", MN_COPY
+        MENUITEM "~Paste\tCtrl+Ins", MN_PASTE
+        MENUITEM "~Delete\tDel" , MN_DELETE
+    }
+}
+
+
+ICON RS_ICON SPIN.ICO
+
+
+STRINGTABLE
+{
+    ST_CLASSNAME, "SPIN"
+    ST_WINDOWTITLE, "Spinbutton"
+
+    ST_STATE +  0, "Florida"
+    ST_STATE +  1, "New York"
+    ST_STATE +  2, "Massachusetts"
+    ST_STATE +  3, "Washington"
+    ST_STATE +  4, "Washington DC"
+    ST_STATE +  5, "Utah"
+    ST_STATE +  6, "Maine"
+    ST_STATE +  7, "New Hampshire"
+    ST_STATE +  8, "Georgia"
+    ST_STATE +  9, "Alaska"
+    ST_STATE + 10, "California"
+    ST_STATE + 11, "Colorado"
+    ST_STATE + 12, "Nevada"
+}
+
+
+ACCELTABLE RS_ACCELTABLE
+{
+    VK_DELETE, MN_CUT, VIRTUALKEY, SHIFT
+    VK_BACKSPACE, MN_UNDO, VIRTUALKEY, ALT
+    VK_DELETE, MN_DELETE, VIRTUALKEY
+    VK_INSERT, MN_COPY, VIRTUALKEY, CONTROL
+    VK_INSERT, MN_PASTE, VIRTUALKEY, SHIFT
+}
+

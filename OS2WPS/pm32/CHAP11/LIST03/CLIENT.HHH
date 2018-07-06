@@ -1,0 +1,19 @@
+#define ID_RES 100
+
+#define	MN_MENU	90
+
+#define MN_MARKET	500
+#define MN_NASDAQ	501
+#define MN_AMEX 	502
+#define MN_NYSE 	503
+#define MN_PRINT	504
+#define MN_EXIT 	505
+
+#define MN_STOCK	91
+
+#define MN_QUERYNASDAQ	520
+#define MN_REQUESTDATA	521
+#define MN_STATS		522
+
+#define MN_SETLINK		523
+#define MN_STOPLINK 	524

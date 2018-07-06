@@ -1,0 +1,21 @@
+// CLIENT.RC
+// Listing 11-3
+
+#include <os2.h>
+#include "client.h"
+#include "dialog.h"
+
+
+ICON RS_ICON CLIENT.ICO
+
+STRINGTABLE
+{
+    ST_CLASSNAME, "CLIENT"
+    ST_WINDOWTITLE, "DDE client"
+}
+
+
+rcinclude client.mnu
+
+rcinclude client.dlg
+

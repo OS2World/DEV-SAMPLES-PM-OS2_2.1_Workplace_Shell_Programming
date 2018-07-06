@@ -1,0 +1,12 @@
+NAME           PRESPAR windowapi
+DESCRIPTION    'Presentation params'
+PROTMODE
+
+HEAPSIZE       12288
+STACKSIZE      20480
+
+EXPORTS
+    ClientWndProc
+    ProdInfoDlgProc
+    ComboDlgProc
+

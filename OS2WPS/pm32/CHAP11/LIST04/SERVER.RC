@@ -1,0 +1,31 @@
+// SERVER.RC
+// Listing 11-04
+
+#include "server.h"
+
+ICON RS_ICON SERVER.ICO
+
+
+STRINGTABLE
+{
+    ST_CLASSNAME, "PMSERVER"
+    ST_WINDOWTITLE, "DDE server"
+
+    ST_STOCK + 0, "ASTA"
+    ST_STOCK + 1, "IBM"
+    ST_STOCK + 2, "MSFT"
+    ST_STOCK + 3, "MGXI"
+    ST_STOCK + 4, "LOTS"
+    ST_STOCK + 5, "BORL"
+}
+
+
+
+rcinclude server.mnu
+
+
+
+RESOURCE RS_STOCKS ID_STOCKS stocks.doc
+RESOURCE RS_VALUES ID_VALUES values.doc
+
+

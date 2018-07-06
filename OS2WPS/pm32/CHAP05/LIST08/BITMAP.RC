@@ -1,0 +1,11 @@
+// BITMAP.RC
+
+#include <os2.h>
+#include "bitmap.h"
+
+BITMAP ID_BMP STEVE.BMP
+
+ICON RS_ALL BITMAP.ICO
+
+
+

@@ -1,0 +1,10 @@
+NAME            SUPERCLS
+DESCRIPTION     'Superclassing'
+PROTMODE
+HEAPSIZE        12880
+STACKSIZE       20480
+
+EXPORTS
+    ClientWndProc
+    MyWndProc
+

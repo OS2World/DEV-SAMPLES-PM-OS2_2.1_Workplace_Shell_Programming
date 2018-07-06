@@ -1,0 +1,8 @@
+// BORDER.RC
+// Listing 10-04
+
+#include "border.h"
+
+ICON RS_ICON BORDER.ICO
+
+

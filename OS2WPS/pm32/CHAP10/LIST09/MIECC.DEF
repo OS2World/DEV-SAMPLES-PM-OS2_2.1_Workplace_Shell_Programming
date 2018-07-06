@@ -1,0 +1,11 @@
+LIBRARY         MIECC
+DESCRIPTION     'A simple custom control'
+PROTMODE
+
+DATA            NONSHARED
+HEAPSIZE        20480
+
+EXPORTS
+;    InitTweny       @1
+    TwenyWndProc    @2
+

@@ -1,0 +1,10 @@
+NAME           LISTBOX
+DESCRIPTION    'A simple listbox'
+PROTMODE
+
+HEAPSIZE       12288
+STACKSIZE      20480
+
+EXPORTS
+    ClientWndProc
+

@@ -1,0 +1,52 @@
+// MENUAPP.RC
+// Listing 06-04
+
+#define INCL_WIN
+#include <os2.h>
+#include "menuapp.h"
+
+ICON RS_ICON MENUAPP.ICO
+
+MENU RS_MENU
+{
+    SUBMENU "~File" , MN_FILE
+    {
+        MENUITEM "~New", MN_NEW
+        MENUITEM "~Open", MN_OPEN
+        MENUITEM "~Save", MN_SAVE
+        MENUITEM "Save ~As...", MN_SAVEAS
+        MENUITEM SEPARATOR
+        MENUITEM "E~xit", MN_EXIT
+    }
+    SUBMENU "~Edit" , MN_EDIT
+    {
+           MENUITEM "~Undo\tAlt+Backspace", MN_UNDO,, MIA_DISABLED
+           MENUITEM "~Redo\tShift+Alt+backspace", MN_REDO,, MIA_DISABLED
+           MENUITEM SEPARATOR
+           MENUITEM "Cu~t\tShift+Delete", MN_CUT,, MIA_DISABLED
+           MENUITEM "~Copy\tCtrl+Insert", MN_COPY,, MIA_DISABLED
+           MENUITEM "~Paste\tShift+Insert", MN_PASTE,, MIA_DISABLED
+           MENUITEM SEPARATOR
+           MENUITEM "~Delete\tDelete", MN_DELETE,, MIA_DISABLED
+           MENUITEM SEPARATOR
+           MENUITEM "~Find...", MN_FIND,, MIA_DISABLED
+           MENUITEM "~Select all\tCtrl+/", MN_SELECTALL,, MIA_DISABLED
+           MENUITEM "~Deselect all\tCtrl+\\", MN_DESELECTALL,, MIA_DISABLED
+    }
+    SUBMENU "~Help", MN_HELP
+    {
+        MENUITEM "Help ~index", MN_HELP1, MIS_HELP
+        MENUITEM "~General help", MN_HELP2, MIS_HELP
+        MENUITEM "~Using help", MN_HELP3, MIS_HELP
+        MENUITEM "~Keys help", MN_HELP4, MIS_HELP
+        MENUITEM SEPARATOR
+        MENUITEM "~Product information", MN_PRODINFO
+    }
+}
+
+STRINGTABLE
+{
+    ST_CLASSNAME, "MENUAPP"
+    ST_WINDOWTITLE, "A window with a menubar"
+}
+

@@ -1,0 +1,35 @@
+// PANEL.RC
+// Listing 12-03
+
+
+#define INCL_WIN
+#include <os2.h>
+#include "panel.h"
+
+
+
+BITMAP RS_BITMAP PANEL.BMP
+ICON RS_ICON PANEL.ICO
+
+
+STRINGTABLE
+{
+    ST_CLASSNAME, "Panel"
+    ST_WINDOWTITLE, "Panel"
+}
+
+MENU RS_MENU
+{
+    MENUITEM "E~xit", MN_EXIT
+    MENUITEM SEPARATOR
+    MENUITEM "~Product information", MN_PRODINFO
+}
+
+
+MENU RS_LISTMENU
+{
+    MENUITEM "~Empty listbox", MN_EMPTY,, MIA_DISABLED
+    MENUITEM "~Show text", MN_TEXT
+}
+
+

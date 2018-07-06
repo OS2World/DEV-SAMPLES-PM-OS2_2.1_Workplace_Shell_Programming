@@ -1,0 +1,10 @@
+NAME           BROADCST
+DESCRIPTION    'Message broadcasting'
+PROTMODE
+
+HEAPSIZE       12288
+STACKSIZE      20480
+
+EXPORTS
+        ClientWndProc
+

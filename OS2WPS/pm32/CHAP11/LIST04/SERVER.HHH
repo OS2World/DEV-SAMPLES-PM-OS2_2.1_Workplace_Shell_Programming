@@ -1,0 +1,19 @@
+// SERVER.HHH
+
+#define ID_RES 100
+
+#define	MN_MENU	90
+
+#define MN_FILE	500
+#define MN_NEW	501
+#define MN_OPEN	502
+#define MN_SAVE	503
+#define MN_SAVEAS	504
+#define MN_PRINT	506
+#define MN_EXIT 	507
+
+#define MN_STOCK	91
+
+#define MN_QUERYNASDAQ	520
+#define MN_REQUESTDATA	521
+#define MN_SETLINK		522

@@ -1,0 +1,10 @@
+NAME           BMPMENU
+DESCRIPTION    'Bitmap menuitems'
+PROTMODE
+
+HEAPSIZE       12288
+STACKSIZE      20480
+
+EXPORTS
+    ClientWndProc
+

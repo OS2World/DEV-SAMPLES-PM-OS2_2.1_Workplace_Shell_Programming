@@ -1,0 +1,30 @@
+# IBM Developer's Workframe/2 Make File Creation run at 20:10:50 on 07/25/93
+
+# Make File Creation run in directory:
+#   F:\PM32\CHAP05\LIST07;
+
+# Assumed INCLUDE environment variable path:
+#   F:\TOOLKT21\C\OS2H;
+#   F:\TOOLKT21\ASM\OS2INC;
+#   F:\IBMCPP\INCLUDE;
+#   F:\IBMCPP\IBMCLASS;
+
+
+INCLUDE002=.
+INCLUDE002=$(INCLUDE002);$(INCLUDE)
+
+INCLUDE001=.
+INCLUDE001=$(INCLUDE001);$(INCLUDE)
+
+INCLUDE000=$(INCLUDE)
+
+
+ICONDRAG.RES:  ICONDRAG.RC  \
+   {$(INCLUDE002)}ICONDRAG.H  \
+   ICONDRAG.ICO  \
+   ICONDRAG.MAK
+
+ICONDRAG.OBJ:  ICONDRAG.C  \
+#  {$(INCLUDE000)}os2.h  \
+   {$(INCLUDE001)}icondrag.h  \
+   ICONDRAG.MAK

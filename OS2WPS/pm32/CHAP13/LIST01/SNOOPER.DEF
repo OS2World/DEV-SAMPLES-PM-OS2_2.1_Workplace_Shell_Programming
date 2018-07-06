@@ -1,0 +1,16 @@
+NAME           SNOOPER WINDOWAPI
+DESCRIPTION    'WPS SNOOPER'
+PROTMODE
+HEAPSIZE       12288
+STACKSIZE      20480
+
+
+EXPORTS
+    ClientWndProc
+    FrameWndProc
+    SnoopWndProc
+    ButtonWndProc
+    DropInfoWndProc
+    DropPanelWndProc
+
+

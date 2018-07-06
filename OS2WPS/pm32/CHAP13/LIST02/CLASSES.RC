@@ -1,0 +1,30 @@
+// CLASSES.RC
+// Listing 13-02
+
+#define INCL_WIN
+
+#include <os2.h>
+#include "classes.h"
+
+MENU RS_MENU
+{
+    SUBMENU "~File" , MN_FILE
+    {
+        MENUITEM "E~xit", MN_EXIT
+        MENUITEM SEPARATOR
+        MENUITEM "~Product information", MN_PRODINFO
+    }
+}
+
+ICON RS_ICON CLASSES.ICO
+
+STRINGTABLE
+{
+    ST_WINDOWTITLE, "WPS classes"
+}
+
+ASSOCTABLE RS_ASSOCT
+{
+    "*.DOC", "Classes", EAF_DEFAULTOWNER, CLASSES.ICO
+}
+

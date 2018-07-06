@@ -1,0 +1,6 @@
+// ICON.RC
+
+#include "icon.h"
+
+ICON RS_ICON ICON.ICO
+

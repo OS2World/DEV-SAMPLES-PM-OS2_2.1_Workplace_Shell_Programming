@@ -1,0 +1,32 @@
+# IBM Developer's Workframe/2 Make File Creation run at 21:48:06 on 07/25/93
+
+# Make File Creation run in directory:
+#   F:\PM32\CHAP07\LIST02;
+
+# Assumed INCLUDE environment variable path:
+#   F:\TOOLKT21\C\OS2H;
+#   F:\TOOLKT21\ASM\OS2INC;
+#   F:\IBMCPP\INCLUDE;
+#   F:\IBMCPP\IBMCLASS;
+
+
+INCLUDE002=.
+INCLUDE002=$(INCLUDE002);$(INCLUDE)
+
+INCLUDE001=.
+INCLUDE001=$(INCLUDE001);$(INCLUDE)
+
+INCLUDE000=$(INCLUDE)
+
+
+BUTTONS.RES:  BUTTONS.RC  \
+   {$(INCLUDE002)}BUTTONS.H  \
+   BUTTONS.ICO  \
+   USA_UP.ICO  \
+   USA_DN.ICO  \
+   BUTTONS.MAK
+
+BUTTONS.OBJ:  BUTTONS.C  \
+#  {$(INCLUDE000)}os2.h  \
+   {$(INCLUDE001)}buttons.h  \
+   BUTTONS.MAK

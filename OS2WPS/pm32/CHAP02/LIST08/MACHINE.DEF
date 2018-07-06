@@ -1,0 +1,12 @@
+;-----------------------------------
+; MACHINE.DEF module definition file
+;-----------------------------------
+
+NAME           MACHINE WINDOWAPI
+DESCRIPTION    'Stefano Maruzzi, 1993'
+PROTMODE
+HEAPSIZE       8192
+STACKSIZE      8192
+EXPORTS
+	ClientWndProc
+

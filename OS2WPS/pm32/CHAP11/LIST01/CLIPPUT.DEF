@@ -1,0 +1,9 @@
+NAME           CLIPPUT WINDOWAPI
+DESCRIPTION    'Inserting text in the Clipboard'
+PROTMODE
+HEAPSIZE       12288
+STACKSIZE      20480
+
+EXPORTS
+    ClientWndProc
+

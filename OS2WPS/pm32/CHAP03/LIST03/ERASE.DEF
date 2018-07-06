@@ -1,0 +1,9 @@
+NAME           ERASE
+DESCRIPTION    'Erase the client window'
+PROTMODE
+HEAPSIZE       12288
+STACKSIZE      8192
+
+EXPORTS
+    ClientWndProc
+

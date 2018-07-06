@@ -1,0 +1,13 @@
+NAME    ODLIST
+
+DESCRIPTION 'Owner-draw listbox'
+CODE    MOVEABLE
+DATA    MOVEABLE MULTIPLE
+
+HEAPSIZE  12288
+STACKSIZE 20480
+
+EXPORTS
+    ClientWndProc
+    ChildWndProc
+

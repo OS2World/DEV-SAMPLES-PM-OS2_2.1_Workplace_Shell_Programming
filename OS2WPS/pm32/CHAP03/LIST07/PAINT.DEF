@@ -1,0 +1,10 @@
+NAME           PAINT
+DESCRIPTION    'Painting example'
+PROTMODE
+
+HEAPSIZE       12288
+STACKSIZE      8192
+
+EXPORTS
+    ClientWndProc
+

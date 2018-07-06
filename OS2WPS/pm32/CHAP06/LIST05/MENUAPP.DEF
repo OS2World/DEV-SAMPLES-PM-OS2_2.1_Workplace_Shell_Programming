@@ -1,0 +1,9 @@
+NAME           MENUAPP
+DESCRIPTION    'Adding a menu frame control'
+PROTMODE
+HEAPSIZE       12288
+STACKSIZE      20480
+
+EXPORTS
+    ClientWndProc
+

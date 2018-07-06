@@ -1,0 +1,17 @@
+// BUTTONS.RC
+// Listing 07-02
+
+
+#include "buttons.h"
+
+ICON RS_ICON    BUTTONS.ICO
+ICON RS_USA_UP   USA_UP.ICO
+ICON RS_USA_DN   USA_DN.ICO
+
+
+STRINGTABLE
+{
+    ST_CLASSNAME, "BUTTONS"
+    ST_WINDOWTITLE, "Some buttons"
+}
+

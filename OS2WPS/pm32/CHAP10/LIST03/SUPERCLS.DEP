@@ -1,0 +1,32 @@
+# IBM Developer's Workframe/2 Make File Creation run at 08:58:14 on 07/26/93
+
+# Make File Creation run in directory:
+#   F:\PM32\CHAP10\LIST03;
+
+# Assumed INCLUDE environment variable path:
+#   F:\TOOLKT21\C\OS2H;
+#   F:\TOOLKT21\ASM\OS2INC;
+#   F:\IBMCPP\INCLUDE;
+#   F:\IBMCPP\IBMCLASS;
+
+
+INCLUDE002=.
+INCLUDE002=$(INCLUDE002);$(INCLUDE)
+
+INCLUDE001=.
+INCLUDE001=$(INCLUDE001);$(INCLUDE)
+
+INCLUDE000=$(INCLUDE)
+
+
+SUPERCLS.RES:  SUPERCLS.RC  \
+   {$(INCLUDE002)}SUPERCLS.H  \
+   SUPERCLS.ICO  \
+   SUPERCLS.MAK
+
+SUPERCLS.OBJ:  SUPERCLS.C  \
+#  {$(INCLUDE000)}os2.h  \
+#  {$(INCLUDE000)}stdio.h  \
+#  {$(INCLUDE000)}string.h  \
+   {$(INCLUDE001)}supercls.h  \
+   SUPERCLS.MAK

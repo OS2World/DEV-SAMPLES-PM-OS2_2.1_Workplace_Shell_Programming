@@ -1,0 +1,11 @@
+NAME           OLDOPEN windowapi
+DESCRIPTION    'Old-style openbox'
+PROTMODE
+HEAPSIZE       12288
+STACKSIZE      20480
+
+EXPORTS
+    ClientWndProc
+    OpenDlgProc
+    ProdInfoDlgProc
+

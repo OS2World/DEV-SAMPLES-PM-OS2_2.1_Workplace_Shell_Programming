@@ -1,0 +1,17 @@
+;-----------------------------------
+; MACHINE.DEF module definition file
+;-----------------------------------
+
+NAME           MACHINE
+DESCRIPTION    'Due finestre e 2 classi'
+PROTMODE
+HEAPSIZE       1024
+STACKSIZE      8192
+
+
+CODE PRELOAD MOVEABLE DISCARDABLE
+DATA PRELOAD MULTIPLE
+
+EXPORTS
+	ClientWndProc1
+	ClientWndProc2

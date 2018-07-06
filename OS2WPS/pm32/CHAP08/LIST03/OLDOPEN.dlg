@@ -1,0 +1,33 @@
+DLGINCLUDE 1 "F:\PM32\CHAP08\LIST03\DIALOG.H"
+
+DLGTEMPLATE DL_OPEN LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Old-style OpenBox", DL_OPEN, 54, 66, 248, 117, FS_NOBYTEALIGN,
+            FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        LTEXT           "Current Directory:", -1, 10, 99, 80, 8
+        LTEXT           "", DL_PATH, 88, 99, 156, 8
+        LTEXT           "Filename:", -1, 10, 83, 48, 8
+        ENTRYFIELD      "", DL_FILEEDIT, 77, 85, 162, 8, ES_MARGIN
+        LTEXT           "Directories", -1, 10, 74, 48, 8
+        CTEXT           "Files", -1, 73, 74, 20, 8
+        LISTBOX         DL_DIRLIST, 10, 9, 61, 64
+        LISTBOX         DL_FILELIST, 73, 9, 92, 64
+        DEFPUSHBUTTON   "~Open", DID_OK, 175, 36, 64, 16, WS_GROUP
+        PUSHBUTTON      "~Cancel", DID_CANCEL, 175, 14, 64, 16, WS_GROUP
+    END
+END
+
+DLGTEMPLATE DL_PRODINFO LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Product information", DL_PRODINFO, 60, 64, 177, 41, FS_NOBYTEALIGN,
+            FCF_TITLEBAR
+    BEGIN
+        CONTROL         DL_PATH, 0, 2, 10, 22, 19, WC_STATIC, SS_BITMAP | 
+                        WS_VISIBLE
+        LTEXT           "IBM OS/2 2.1 PM Programming", -1, 38, 24, 134, 8
+        LTEXT           "Stefano Maruzzi 1993", -1, 38, 10, 93, 8
+        DEFPUSHBUTTON   "~OK", DID_OK, 131, 10, 40, 10, WS_GROUP
+    END
+END
+

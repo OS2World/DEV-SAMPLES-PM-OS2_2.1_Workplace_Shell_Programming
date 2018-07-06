@@ -1,0 +1,9 @@
+NAME           TIMER
+DESCRIPTION    'Esempio di impiego dei timer'
+PROTMODE
+HEAPSIZE       12288
+STACKSIZE      20480
+
+EXPORTS
+    ClientWndProc
+

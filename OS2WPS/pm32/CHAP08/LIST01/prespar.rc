@@ -1,0 +1,39 @@
+// PRESPAR.RC
+// Listing 08-01
+
+#define INCL_WIN
+#define INCL_GPI
+
+#include <os2.h>
+#include "prespar.h"
+
+rcinclude prespar.dlg
+BITMAP RS_BITMAP PRODINFO.BMP
+ICON RS_ICON PRESPAR.ICO
+
+
+MENU RS_MENU
+{
+    SUBMENU "~File", MN_FILE
+    {
+        MENUITEM "~Dialog...\tF9", MN_DIALOG
+        MENUITEM SEPARATOR
+        MENUITEM "~Product information", MN_PRODINFO
+        MENUITEM SEPARATOR
+        MENUITEM "E~xit", MN_EXIT
+    }
+}
+
+ACCELTABLE RS_ACCELTABLE
+{
+    VK_F9, MN_DIALOG, VIRTUALKEY, LONEKEY
+}
+
+
+
+STRINGTABLE
+{
+	ST_CLASSNAME, "PRESPAR"
+	ST_WINDOWTITLE, "Use of presentation params"
+}
+

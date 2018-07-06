@@ -1,0 +1,32 @@
+// BMPMENU.RC
+// Listing 06-08
+
+#include <pmwin.h>
+#include "bmpmenu.h"
+
+BITMAP 1 blue.bmp
+BITMAP 2 red.bmp
+BITMAP 3 green.bmp
+BITMAP 4 pink.bmp
+
+MENU RS_MENU
+{
+    SUBMENU "~Colors" , MN_COLORS
+    {
+        MENUITEM "#1", MN_BLUE, MIS_BITMAP
+        MENUITEM "#2", MN_RED, MIS_BITMAP
+        MENUITEM "#3", MN_GREEN, MIS_BITMAP
+        MENUITEM "#4", MN_PINK, MIS_BITMAP
+        MENUITEM SEPARATOR
+        MENUITEM "E~xit", MN_EXIT
+    }
+}
+
+ICON RS_ICON BMPMENU.ICO
+
+STRINGTABLE
+{
+    ST_CLASSNAME, "BMPMENU"
+    ST_WINDOWTITLE, "Bitmap menuitems"
+}
+

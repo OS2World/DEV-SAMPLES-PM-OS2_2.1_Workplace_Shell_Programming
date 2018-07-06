@@ -1,0 +1,38 @@
+# IBM Developer's Workframe/2 Make File Creation run at 15:02:17 on 07/26/93
+
+# Make File Creation run in directory:
+#   F:\PM32\CHAP12\LIST04;
+
+# Assumed INCLUDE environment variable path:
+#   F:\TOOLKT21\C\OS2H;
+#   F:\TOOLKT21\ASM\OS2INC;
+#   F:\IBMCPP\INCLUDE;
+#   F:\IBMCPP\IBMCLASS;
+
+
+INCLUDE002=.
+INCLUDE002=$(INCLUDE002);$(INCLUDE)
+
+INCLUDE001=.
+INCLUDE001=$(INCLUDE001);$(INCLUDE)
+
+INCLUDE000=$(INCLUDE)
+
+
+WPSFLDR.RES:  WPSFLDR.RC  \
+#  {$(INCLUDE002)}OS2.H  \
+   {$(INCLUDE002)}WPSFLDR.H  \
+   WPSFLDR.ICO  \
+   RGB.ICO  \
+   RED.ICO  \
+   GREEN.ICO  \
+   BLUE.ICO  \
+   WPSFLDR.BMP  \
+   WPSFLDR.MAK
+
+WPSFLDR.OBJ:  WPSFLDR.C  \
+#  {$(INCLUDE000)}os2.h  \
+#  {$(INCLUDE000)}string.h  \
+   {$(INCLUDE001)}wpsfldr.h  \
+   WPSFLDR.MAK
+

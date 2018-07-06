@@ -1,0 +1,11 @@
+NAME           CLASSES WINDOWAPI
+DESCRIPTION    'A list of all WPS object classes'
+PROTMODE
+
+HEAPSIZE       12288
+STACKSIZE      20480
+
+EXPORTS
+    ClientWndProc
+    TitlebarWndProc
+

@@ -1,0 +1,32 @@
+# IBM Developer's Workframe/2 Make File Creation run at 10:32:56 on 07/26/93
+
+# Make File Creation run in directory:
+#   F:\PM32\CHAP10\LIST08;
+
+# Assumed INCLUDE environment variable path:
+#   F:\TOOLKT21\C\OS2H;
+#   F:\TOOLKT21\ASM\OS2INC;
+#   F:\IBMCPP\INCLUDE;
+#   F:\IBMCPP\IBMCLASS;
+
+
+INCLUDE002=.
+INCLUDE002=$(INCLUDE002);$(INCLUDE)
+
+INCLUDE001=.
+INCLUDE001=$(INCLUDE001);$(INCLUDE)
+
+INCLUDE000=$(INCLUDE)
+
+
+SYSDLLS.RES:  SYSDLLS.RC  \
+   {$(INCLUDE002)}SYSDLLS.H  \
+   SYSDLLS.ICO  \
+   SYSDLLS.MAK
+
+SYSDLLS.OBJ:  SYSDLLS.C  \
+#  {$(INCLUDE000)}os2.h  \
+#  {$(INCLUDE000)}stdio.h  \
+#  {$(INCLUDE000)}string.h  \
+   {$(INCLUDE001)}sysdlls.h  \
+   SYSDLLS.MAK

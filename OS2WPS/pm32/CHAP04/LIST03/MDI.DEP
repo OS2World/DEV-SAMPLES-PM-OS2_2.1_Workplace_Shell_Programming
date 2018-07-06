@@ -1,0 +1,18 @@
+# IBM Developer's Workframe/2 Make File Creation run at 16:15:06 on 07/25/93
+
+# Make File Creation run in directory:
+#   F:\PM32\CHAP04\LIST03;
+
+# Assumed INCLUDE environment variable path:
+#   F:\TOOLKT21\C\OS2H;
+#   F:\TOOLKT21\ASM\OS2INC;
+#   F:\IBMCPP\INCLUDE;
+#   F:\IBMCPP\IBMCLASS;
+
+
+INCLUDE000=$(INCLUDE)
+
+
+MDI.OBJ:  MDI.C  \
+#  {$(INCLUDE000)}os2.h  \
+   MDI.MAK

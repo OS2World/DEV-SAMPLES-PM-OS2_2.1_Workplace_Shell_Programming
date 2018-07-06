@@ -1,0 +1,11 @@
+NAME               whereis WINDOWAPI
+DESCRIPTION    'WHEREIS in versione multithreaded'
+PROTMODE
+
+HEAPSIZE       12288
+STACKSIZE      20480
+
+EXPORTS
+        ClientWndProc
+        YesNoProc
+

@@ -1,0 +1,10 @@
+NAME           BITMAP
+DESCRIPTION    'Tracking a bitmap'
+PROTMODE
+
+HEAPSIZE       12288
+STACKSIZE      20480
+
+EXPORTS
+ClientWndProc
+

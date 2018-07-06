@@ -1,0 +1,56 @@
+DLGINCLUDE 1 "F:\PM32\CHAP14\LIST04\DIALOGS.H"
+
+DLGTEMPLATE 259 LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Goto window", 259, 95, 54, 109, 37, FS_NOBYTEALIGN | WS_VISIBLE, 
+            FCF_TITLEBAR
+    BEGIN
+        LTEXT           "Go to line #", -1, 4, 24, 49, 8
+        LTEXT           "", DL_GOTO, 5, 10, 37, 8
+        PUSHBUTTON      "~Cancel", DID_CANCEL, 5, 4, 38, 13
+        DEFPUSHBUTTON   "~Ok", DID_OK, 62, 4, 38, 13
+        CONTROL         "", 260, 62, 22, 38, 12, WC_SPINBUTTON, 
+                        SPBS_ALLCHARACTERS | SPBS_NUMERICONLY | SPBS_MASTER | 
+                        SPBS_SERVANT | SPBS_JUSTDEFAULT | SPBS_JUSTRIGHT | 
+                        SPBS_FASTSPIN | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+    END
+END
+
+DLGTEMPLATE 10002 LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Dialog Title", 10002, 88, 31, 113, 79, NOT FS_DLGBORDER | 
+            WS_VISIBLE
+            PRESPARAMS PP_FONTNAMESIZE, "10.Helv"
+    BEGIN
+        GROUPBOX        "Values", 101, 4, 20, 104, 53
+        PUSHBUTTON      "Undo", CT_UNDO, 4, 4, 33, 14
+        PUSHBUTTON      "Default", CT_DEFAULT, 40, 4, 33, 14
+        PUSHBUTTON      "Help", CT_HELP, 75, 4, 33, 14
+        AUTOCHECKBOX    "Store position", CT_POSITION, 8, 54, 52, 10
+        AUTOCHECKBOX    "Show line number", CT_LINENUMBER, 8, 44, 64, 10
+        AUTOCHECKBOX    "Show info line", CT_INFOLINE, 8, 34, 64, 10
+        AUTOCHECKBOX    "Send it", CT_SENDIT, 8, 24, 64, 10
+    END
+END
+
+DLGTEMPLATE 10001 LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Dialog Title", 10001, 88, 31, 113, 70, NOT FS_DLGBORDER | 
+            WS_VISIBLE
+            PRESPARAMS PP_FONTNAMESIZE, "10.Helv"
+    BEGIN
+        GROUPBOX        "Attributes", 101, 4, 21, 104, 43
+        AUTORADIOBUTTON "Color Palette", CT_CLRPAL, 6, 41, 50, 10
+        AUTORADIOBUTTON "Font Palette", CT_FNTPAL, 58, 41, 47, 10
+        PUSHBUTTON      "Undo", CT_UNDO, 4, 4, 33, 14
+        PUSHBUTTON      "Default", CT_DEFAULT, 40, 4, 33, 14
+        PUSHBUTTON      "Help", CT_HELP, 75, 4, 33, 14
+        LTEXT           "Text", -1, 9, 27, 17, 8
+        CONTROL         "", CT_TEXTEX, 25, 27, 12, 8, WC_STATIC, SS_TEXT |
+                        WS_GROUP | WS_VISIBLE
+        LTEXT           "Back", -1, 67, 27, 17, 8
+        CONTROL         "", CT_BACKEX, 87, 27, 12, 8, WC_STATIC, SS_TEXT |
+                        WS_GROUP | WS_VISIBLE
+    END
+END
+

@@ -1,0 +1,10 @@
+NAME           MACHINE WINDOWAPI
+EXETYPE      OS2
+DESCRIPTION    'A basic PM application'
+PROTMODE
+HEAPSIZE       12288
+STACKSIZE      20480
+
+EXPORTS
+    ClientWndProc
+

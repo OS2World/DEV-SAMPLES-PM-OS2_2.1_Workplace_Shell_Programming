@@ -1,0 +1,8 @@
+// SUBCLASS.RC
+// Listing 10-02
+
+#include "subclass.h"
+
+ICON RS_ICON SUBCLASS.ICO
+
+

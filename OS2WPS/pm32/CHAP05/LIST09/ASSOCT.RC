@@ -1,0 +1,17 @@
+// ASSOCT.RC
+
+#include <os2.h>
+#include "assoct.h"
+
+DEFAULTICON ASSOCT.ICO
+
+ICON RS_ICON ASSOCT.ICO
+
+ASSOCTABLE ID_ASSOCTABLE
+{
+    "A.C. Milan", "", EAF_DEFAULTOWNER, ASSOCT.ICO
+    "1993 Italian Champions", "", EAF_REUSEICON
+    "1993 European Champions", "", EAF_REUSEICON
+}
+
+

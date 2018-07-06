@@ -1,0 +1,10 @@
+NAME           PANEL WINDOWAPI
+DESCRIPTION    'Valueset drag & drop example'
+PROTMODE
+HEAPSIZE       12288
+STACKSIZE      20480
+
+EXPORTS
+    ClientWndProc
+
+

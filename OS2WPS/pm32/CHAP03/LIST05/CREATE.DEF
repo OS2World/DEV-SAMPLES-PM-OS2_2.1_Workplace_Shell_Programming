@@ -1,0 +1,9 @@
+NAME           CREATE
+DESCRIPTION    'Intercepting WM_CREATE'
+PROTMODE
+HEAPSIZE       12288
+STACKSIZE      8192
+
+EXPORTS
+    ClientWndProc
+

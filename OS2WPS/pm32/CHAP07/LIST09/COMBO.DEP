@@ -1,0 +1,31 @@
+# IBM Developer's Workframe/2 Make File Creation run at 22:10:22 on 07/25/93
+
+# Make File Creation run in directory:
+#   F:\PM32\CHAP07\LIST09;
+
+# Assumed INCLUDE environment variable path:
+#   F:\TOOLKT21\C\OS2H;
+#   F:\TOOLKT21\ASM\OS2INC;
+#   F:\IBMCPP\INCLUDE;
+#   F:\IBMCPP\IBMCLASS;
+
+
+INCLUDE002=.
+INCLUDE002=$(INCLUDE002);$(INCLUDE)
+
+INCLUDE001=.
+INCLUDE001=$(INCLUDE001);$(INCLUDE)
+
+INCLUDE000=$(INCLUDE)
+
+
+COMBO.RES:  COMBO.RC  \
+   {$(INCLUDE002)}COMBO.H  \
+   COMBO.ICO  \
+   COMBO.MAK
+
+COMBO.OBJ:  COMBO.C  \
+#  {$(INCLUDE000)}os2.h  \
+#  {$(INCLUDE000)}stdio.h  \
+   {$(INCLUDE001)}combo.h  \
+   COMBO.MAK

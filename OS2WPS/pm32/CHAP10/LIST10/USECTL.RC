@@ -1,0 +1,16 @@
+// USECTL.RC
+// Listing 10-10
+
+
+#include "usectl.h"
+
+POINTER RS_ICON USECTL.ICO
+
+STRINGTABLE
+{
+    ST_CLASSNAME, "USECTL"
+    ST_WINDOWTITLE, "Using a public custom control"
+    ST_CONTROLNAME, "TWENY"
+}
+
+

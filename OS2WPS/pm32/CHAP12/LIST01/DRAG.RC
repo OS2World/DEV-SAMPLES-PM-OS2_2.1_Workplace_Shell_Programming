@@ -1,0 +1,8 @@
+// DRAG.RC
+// Listing 12-01
+
+#include "drag.h"
+
+POINTER RS_ICON DRAG.ICO
+
+

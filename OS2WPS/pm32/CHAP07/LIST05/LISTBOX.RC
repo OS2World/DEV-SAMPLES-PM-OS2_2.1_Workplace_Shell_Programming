@@ -1,0 +1,57 @@
+// LISTBOX.RC
+// Listing 07-05
+
+#define INCL_WIN
+
+#include <os2.h>
+#include "listbox.h"
+
+MENU RS_MENU
+{
+    SUBMENU "~File" , MN_FILE
+    {
+        MENUITEM "~New", MN_NEW
+        MENUITEM "~Open", MN_OPEN
+        MENUITEM "~Save", MN_SAVE,, MIA_DISABLED
+        MENUITEM "Save ~As...", MN_SAVEAS,, MIA_DISABLED
+        MENUITEM SEPARATOR
+        MENUITEM "E~xit", MN_EXIT
+        MENUITEM "~Product information", MN_PRODINFO
+    }
+    SUBMENU "~Edit" , MN_EDIT
+    {
+        MENUITEM "~Undo\tAlt+Backspace", MN_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu~t\tShift+Del", MN_CUT,, MIA_DISABLED
+        MENUITEM "~Copy\tShift+Ins", MN_COPY,, MIA_DISABLED
+        MENUITEM "~Paste\tCtrl+Ins", MN_PASTE,, MIA_DISABLED
+        MENUITEM "~Delete\tDel" , MN_CLEAR,, MIA_DISABLED
+    }
+}
+
+ACCELTABLE RS_ACCELTABLE
+{
+    VK_BACKSPACE,   MN_UNDO, VIRTUALKEY, ALT
+    VK_DELETE,      MN_CUT, VIRTUALKEY, SHIFT
+    VK_INSERT,      MN_COPY, VIRTUALKEY, SHIFT
+    VK_INSERT,      MN_PASTE, VIRTUALKEY, CONTROL
+    VK_DELETE,      MN_CLEAR, VIRTUALKEY
+}
+
+ICON RS_ICON LISTBOX.ICO
+
+STRINGTABLE
+{
+    ST_CLASSNAME, "LISTBOXCLASS"
+    ST_WINDOWTITLE, "A simple listbox"
+
+    ST_MARRIOTT + 0, "Boston Copley Place, MA"
+    ST_MARRIOTT + 1, "Newport Beach, CA"
+    ST_MARRIOTT + 2, "Marquis New York, NY"
+    ST_MARRIOTT + 3, "New York, NY"
+    ST_MARRIOTT + 4, "San Francis Marriott, CA"
+    ST_MARRIOTT + 5, "Los Angeles Airport, CA"
+    ST_MARRIOTT + 6, "Portland Marriott, OR"
+    ST_MARRIOTT + 7, "Boca Raton, FL"
+}
+

@@ -1,0 +1,18 @@
+NAME           PMEDIT WINDOWAPI
+DESCRIPTION    'PM Editor - 1993'
+PROTMODE
+
+HEAPSIZE       20480
+STACKSIZE      20480
+
+EXPORTS
+    NewMleWndProc
+    Goto
+    NotebookWndProc
+    SettingsWndProc
+    ValuesWndProc
+    TitleMenuWndProc
+    TitlebarWndProc
+    EditWndProc
+    FrameWndProc
+

@@ -1,0 +1,165 @@
+// PMEDIT.RC
+// Listing 13-04
+
+#define INCL_WIN
+#include <os2.h>
+#include "pmedit.h"
+
+// application icons (RS_ALL)
+ICON RS_ICON        PMEDIT.ICO
+
+// menu bitmap
+BITMAP 300 PMEDIT.BMP
+
+// inclusione dialog template
+rcinclude PMEDIT.DLG
+
+MENU RS_NEWSYS
+{
+    SUBMENU "#300", 0x8002, MIS_BITMAP
+    {
+        SUBMENU "~Open", PM_OPEN
+        {
+            MENUITEM "Settings", MN_SETTINGS,, MIA_CHECKED
+            MENUITEM "~Icon view", MN_ICONVIEW
+        }
+        SUBMENU "~Help", PM_HELP
+        {
+            MENUITEM "Help ~index", MN_HELP1
+            MENUITEM "~General help", MN_HELP2,, MIA_CHECKED
+            MENUITEM "~Using help", MN_HELP3
+            MENUITEM "~Keys help", MN_HELP4
+            MENUITEM SEPARATOR
+            MENUITEM "~Product information", MN_PRODINFO
+        }
+        MENUITEM SEPARATOR
+
+        SUBMENU "~Create another", PM_CREATEAN
+        {
+            MENUITEM "Default", MN_DEFAULT,, MIA_CHECKED
+            MENUITEM "~Editor", MN_EDITOR
+        }
+        MENUITEM "~Copy...", PM_COPY
+        MENUITEM "~Move...", PM_MOVE
+        MENUITEM "Create ~shadow...", PM_SHADOW
+        MENUITEM "~Delete...", PM_DELETE
+        SUBMENU "~Edit", MN_EDIT
+        {
+            MENUITEM "~Undo\tAlt+F5", MN_UNDO,, MIA_DISABLED
+            MENUITEM "~Redo\tShift+Alt+backspace", MN_REDO,, MIA_DISABLED
+            MENUITEM SEPARATOR
+            MENUITEM "Cu~t\tShift+Delete", MN_CUT,, MIA_DISABLED
+            MENUITEM "~Copy\tCtrl+Insert", MN_COPY,, MIA_DISABLED
+            MENUITEM "~Paste\tShift+Insert", MN_PASTE,, MIA_DISABLED
+            MENUITEM SEPARATOR
+            MENUITEM "~Delete\tDelete", MN_DELETE,, MIA_DISABLED
+            MENUITEM SEPARATOR
+            MENUITEM "~Find...", MN_FIND,, MIA_DISABLED
+            MENUITEM "~Select all\tCtrl+/", MN_SELECTALL,, MIA_DISABLED
+            MENUITEM "~Deselect all\tCtrl+\\", MN_DESELECTALL,, MIA_DISABLED
+        }
+        MENUITEM SEPARATOR
+
+        SUBMENU "Window", MN_WINDOW
+        {
+            MENUITEM "~Restore\tAlt+F5", SC_RESTORE, MIS_SYSCOMMAND
+            MENUITEM "~Move\tAlt+F7", SC_MOVE, MIS_SYSCOMMAND
+            MENUITEM "~Size\tAlt+F8", SC_SIZE, MIS_SYSCOMMAND
+            MENUITEM "Mi~nimize\tAlt+F9", SC_MINIMIZE, MIS_SYSCOMMAND
+            MENUITEM "Ma~ximize\tAlt+F10", SC_MAXIMIZE, MIS_SYSCOMMAND
+            MENUITEM "~Hide\tAlt+F11", SC_HIDE, MIS_SYSCOMMAND
+            MENUITEM SEPARATOR
+            MENUITEM "~Close\tAlt+F4", SC_CLOSE, MIS_SYSCOMMAND
+            MENUITEM SEPARATOR
+            MENUITEM "Window lis~t\tCtrl+Esc", SC_TASKMANAGER, MIS_SYSCOMMAND
+        }
+        MENUITEM SEPARATOR
+        MENUITEM "Send it", PM_SENDIT
+        MENUITEM SEPARATOR
+        MENUITEM "Close", SC_CLOSE, MIS_SYSCOMMAND
+    }
+}
+
+
+// accelerator table
+ACCELTABLE RS_ACCELTABLE
+{
+   VK_F4, MN_EXIT, VIRTUALKEY, ALT
+   "G", MN_GOTO, CONTROL
+   "g", MN_GOTO, CONTROL
+    VK_F9, MN_EDITTITLE, VIRTUALKEY, SHIFT
+}
+
+
+
+// tabelle delle stringhe
+STRINGTABLE
+{
+    // child window system menu
+    SC_RESTORE, "Restore window to normal size"
+    SC_MOVE, "Change window position"
+    SC_SIZE, "Change window size"
+    SC_MAXIMIZE, "Enlarge window to full size"
+    SC_MINIMIZE, "Reduce window to icon"
+    SC_CLOSE, "Close window"
+    SC_TASKMANAGER, "Switch to Task List"
+
+    // child system menu when maximized
+    MN_CLOSE, "Close window"
+
+    // File menu
+    MN_FILE, "Open, save or close files"
+    MN_NEW, "Create new document"
+    MN_OPEN, "Open existing document"
+    MN_CLOSEDOC, "Close active document"
+    MN_SAVE, "Save document"
+    MN_SAVEAS, "Save document with name"
+    MN_EXIT, "Exit application"
+    MN_PRODINFO, "Information on the application"
+
+    // Edit menu
+    MN_EDIT, "Copy, move or clear selection"
+    MN_UNDO, "Undo previous action"
+    MN_CUT, "Cut selected text"
+    MN_COPY, "Duplicate selected text"
+    MN_PASTE, "Insert selected text"
+    MN_DELETE, "Delete selected text"
+    MN_FIND, "Search string of text"
+    MN_GOTO, "Goto line number"
+
+    // options menu
+    MN_OPTIONS, "Handle a document"
+    MN_FONTS, "Change font"
+    MN_BACKGROUND, "Change background color"
+    MN_FOREGROUND, "Change foreground color"
+
+    // help menu
+    MN_HELP1, "Not implemented yet"
+    MN_HELP2, "Not implemented yet"
+    MN_HELP3, "Not implemented yet"
+    MN_HELP4, "Not implemented yet"
+}
+
+
+HELPTABLE HT_MAIN // HT_MAIN Š l'ID della frame window principale
+{
+    HELPITEM HT_MAIN, MN_HELP, XHT_MAIN
+}
+
+
+HELPSUBTABLE MN_HELP // the help top level menu
+{
+    HELPSUBITEM MN_HELP1, SHTP_WINDOW
+    HELPSUBITEM MN_HELP2, SHTP_WINDOW
+    HELPSUBITEM MN_HELP3, SHTP_WINDOW
+    HELPSUBITEM MN_HELP4, SHTP_WINDOW
+}
+
+ASSOCTABLE ID_ASSOCTABLE
+{
+   "Document", "", EAF_DEFAULTOWNER | EAF_UNCHANGEABLE, PMEDIT.ICO
+}
+
+DEFAULTICON PMEDIT.ICO
+
+

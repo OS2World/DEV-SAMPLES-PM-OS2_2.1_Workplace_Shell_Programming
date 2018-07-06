@@ -1,0 +1,44 @@
+// MENU.RC
+// Listing 09-01
+
+#include <os2.h>
+#include "menu.h"
+#include "dialog.h"
+
+rcinclude menu.dlg
+
+ICON RS_ICON    MENU.ICO
+
+MENU RS_MENU
+{
+    MENUITEM "", MN_FAKE
+}
+
+MENU MN_MENU
+{
+    SUBMENU "~File", MN_START
+    {
+        MENUITEM "~New\tCtrl+N", MN_START + 1,,MIA_CHECKED
+        MENUITEM "~Open...\tAlt+Ins", MN_START + 2
+        MENUITEM "~Delete", MN_START + 3
+
+        SUBMENU "~Save", MN_START + 4
+        {
+            MENUITEM "Save ~As...", MN_START + 5,,MIA_DISABLED
+            MENUITEM "Save A~ll", MN_START + 6
+        }
+        MENUITEM "P~lace", MN_START + 7
+
+        SUBMENU "~Printer", MN_START + 8
+        {
+            MENUITEM "Pa~ge setup...", MN_START + 9
+            MENUITEM "P~rinter setup...", MN_START + 10
+        }
+        MENUITEM SEPARATOR
+        MENUITEM "E~xit", MN_START + 12
+    }
+    MENUITEM "~Window", MN_START + TOTITEM
+    MENUITEM "~Help", MN_START + TOTITEM + TOTITEM
+}
+
+

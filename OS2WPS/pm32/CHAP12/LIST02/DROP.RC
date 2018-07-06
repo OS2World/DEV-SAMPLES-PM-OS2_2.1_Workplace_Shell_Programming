@@ -1,0 +1,8 @@
+// DROP.RC
+// Listing 12-02
+
+#include "drop.h"
+
+POINTER RS_OBJ DROP.ICO
+
+

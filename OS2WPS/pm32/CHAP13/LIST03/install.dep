@@ -1,0 +1,44 @@
+# IBM Developer's Workframe/2 Make File Creation run at 08:21:37 on 07/27/93
+
+# Make File Creation run in directory:
+#   F:\PM32\CHAP13\LIST03;
+
+# Assumed INCLUDE environment variable path:
+#   F:\TOOLKT21\C\OS2H;
+#   F:\TOOLKT21\ASM\OS2INC;
+#   F:\IBMCPP\INCLUDE;
+#   F:\IBMCPP\IBMCLASS;
+
+
+INCLUDE002=.
+INCLUDE002=$(INCLUDE002);$(INCLUDE)
+
+INCLUDE001=.
+INCLUDE001=$(INCLUDE001);$(INCLUDE)
+
+INCLUDE000=$(INCLUDE)
+
+
+install.RES:  install.rc  \
+#  {$(INCLUDE002)}OS2.H  \
+   {$(INCLUDE002)}INSTALL.H  \
+   INSTALL.ICO  \
+   INSTFOLD.ICO  \
+   INSTALL.MAK
+
+install.OBJ:  install.c  \
+#  {$(INCLUDE000)}os2.h  \
+#  {$(INCLUDE000)}stdio.h  \
+#  {$(INCLUDE000)}stdlib.h  \
+   {$(INCLUDE001)}install.h  \
+   {$(INCLUDE001)}mie02.h  \
+   {$(INCLUDE001)}where.h  \
+   INSTALL.MAK
+
+where.OBJ:  where.c  \
+#  {$(INCLUDE000)}os2.h  \
+#  {$(INCLUDE000)}stdio.h  \
+#  {$(INCLUDE000)}string.h  \
+   {$(INCLUDE001)}where.h  \
+   INSTALL.MAK
+

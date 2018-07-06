@@ -1,0 +1,9 @@
+NAME            BORDER
+DESCRIPTION     'Using a function from a DLL'
+PROTMODE
+HEAPSIZE        12880
+STACKSIZE       20480
+
+EXPORTS
+        ClientWndProc
+

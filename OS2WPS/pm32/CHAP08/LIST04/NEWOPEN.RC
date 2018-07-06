@@ -1,0 +1,54 @@
+// NEWOPEN.RC
+// Listing 08-04
+
+#define INCL_WIN
+
+#include <os2.h>
+#include "newopen.h"
+
+rcinclude NEWOPEN.DLG
+
+ICON RS_ICON NEWOPEN.ICO
+BITMAP RS_BITMAP PRODINFO.BMP
+
+MENU RS_MENU
+{
+    SUBMENU "~File" , MN_FILE
+    {
+        MENUITEM "~New" , MN_NEW
+        MENUITEM "~Open...", MN_OPEN
+        MENUITEM "~Save", MN_SAVE, MIS_TEXT, MIA_DISABLED
+        MENUITEM "Save ~As..." , MN_SAVEAS, MIS_TEXT, MIA_DISABLED
+        MENUITEM SEPARATOR
+        MENUITEM "~Font...", MN_FONT
+        MENUITEM SEPARATOR
+        MENUITEM "E~xit", MN_EXIT
+        MENUITEM "~Product Information", MN_PRODINFO
+    }
+    SUBMENU "~Edit" , MN_EDIT
+    {
+        MENUITEM "~Undo\tAlt+Backspace" , MN_UNDO, MIS_TEXT, MIA_DISABLED
+        MENUITEM SEPARATOR
+        MENUITEM "~Cut\tShift+Del", MN_CUT, MIS_TEXT, MIA_DISABLED
+        MENUITEM "Co~py\tShift+Ins", MN_COPY, MIS_TEXT, MIA_DISABLED
+        MENUITEM "~Paste\tCtrl+Ins", MN_PASTE, MIS_TEXT, MIA_DISABLED
+        MENUITEM "~Delete\tDel" , MN_DELETE, MIS_TEXT, MIA_DISABLED
+    }
+}
+
+ACCELTABLE RS_ACCELTABLE
+{
+    VK_BACKSPACE,   MN_UNDO , VIRTUALKEY, ALT
+    VK_DELETE,      MN_CUT, VIRTUALKEY, SHIFT
+    VK_INSERT,      MN_COPY, VIRTUALKEY, SHIFT
+    VK_INSERT,      MN_PASTE, VIRTUALKEY, CONTROL
+    VK_DELETE,      MN_DELETE, VIRTUALKEY
+}
+
+STRINGTABLE
+{
+    ST_CLASSNAME, "NEWOPEN"
+    ST_WINDOWTITLE, "A new-style openbox"
+}
+
+

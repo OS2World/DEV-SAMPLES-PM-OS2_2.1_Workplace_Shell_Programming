@@ -1,0 +1,9 @@
+NAME           SCRLLBAR
+DESCRIPTION    'Scrolling the predefined colors'
+
+HEAPSIZE       12288
+STACKSIZE      20480
+
+EXPORTS
+    ClientWndProc
+

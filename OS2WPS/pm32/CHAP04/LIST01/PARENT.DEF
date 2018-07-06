@@ -1,0 +1,10 @@
+NAME           PARENT
+DESCRIPTION    'Parenthood'
+PROTMODE
+HEAPSIZE       12288
+STACKSIZE      20480
+
+EXPORTS
+    ClientWndProc1
+    ClientWndProc2
+

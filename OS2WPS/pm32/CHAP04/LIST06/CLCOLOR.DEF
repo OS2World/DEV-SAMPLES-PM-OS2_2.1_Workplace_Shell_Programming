@@ -1,0 +1,10 @@
+NAME           CLCOLOR
+DESCRIPTION    'Painting the client window'
+PROTMODE
+
+HEAPSIZE        12288
+STACKSIZE       20480
+
+EXPORTS
+    ClientWndProc
+

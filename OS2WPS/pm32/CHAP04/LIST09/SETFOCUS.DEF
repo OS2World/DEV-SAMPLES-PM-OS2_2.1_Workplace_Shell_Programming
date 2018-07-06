@@ -1,0 +1,9 @@
+NAME           SETFOCUS windowapi
+DESCRIPTION    'Intercepting WM_SETFOCUS'
+PROTMODE
+HEAPSIZE       12288
+STACKSIZE      20480
+
+EXPORTS
+    ClientWndProc
+

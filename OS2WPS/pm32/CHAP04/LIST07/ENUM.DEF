@@ -1,0 +1,10 @@
+NAME           ENUM
+DESCRIPTION    'Windows enumaration'
+PROTMODE
+
+HEAPSIZE       12288
+STACKSIZE      20480
+
+EXPORTS
+        ClientWndProc
+

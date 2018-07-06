@@ -1,0 +1,9 @@
+NAME           CLIPSHOW WINDOWAPI
+DESCRIPTION    'Retrieving text from the Clipboard'
+PROTMODE
+HEAPSIZE       12288
+STACKSIZE      20480
+
+EXPORTS
+    ClientWndProc
+

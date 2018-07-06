@@ -1,0 +1,10 @@
+NAME            WINDOW
+DESCRIPTION     'Using a window registred in a DLL'
+CODE            PRELOAD MOVEABLE
+DATA            PRELOAD MOVEABLE MULTIPLE
+HEAPSIZE        12288
+STACKSIZE       20480
+
+EXPORTS
+    ClientWndProc
+

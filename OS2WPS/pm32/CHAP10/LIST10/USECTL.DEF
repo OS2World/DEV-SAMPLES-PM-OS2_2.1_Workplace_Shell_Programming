@@ -1,0 +1,12 @@
+NAME            USECTL
+DESCRIPTION     'Using a public custom control'
+
+CODE    MOVEABLE DISCARDABLE
+DATA    MOVEABLE MULTIPLE
+
+HEAPSIZE  12288
+STACKSIZE 20480
+
+EXPORTS
+    ClientWndProc
+

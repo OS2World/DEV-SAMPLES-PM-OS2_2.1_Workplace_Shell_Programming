@@ -1,0 +1,12 @@
+// ICONDRAG.RC
+
+#include "icondrag.h"
+
+POINTER RS_ICON ICONDRAG.ICO
+
+STRINGTABLE
+{
+    ST_CLASSNAME, "ICONDRAG"
+    ST_WINDOWTITLE, "Dragging an icon"
+}
+

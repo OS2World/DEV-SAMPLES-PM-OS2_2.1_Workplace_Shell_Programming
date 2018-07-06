@@ -1,0 +1,17 @@
+// ENTRY.RC
+// Listing 07-08
+
+#include <pmwin.h>
+#include "entry.h"
+
+MENU RS_MENU
+{
+    SUBMENU "~File" , MN_FILE
+    {
+        MENUITEM "E~xit", MN_EXIT
+    }
+}
+
+
+ICON RS_ICON ENTRY.ICO
+

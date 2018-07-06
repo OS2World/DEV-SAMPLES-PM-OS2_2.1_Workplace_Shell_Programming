@@ -1,0 +1,34 @@
+// SNOOPER.RC
+// Listing 07-01
+
+#include "snooper.h"
+
+POINTER RS_ICON SNOOPER.ICO
+
+STRINGTABLE
+{
+   1, " - WC_FRAME"
+   2, " - WC_COMBOBOX"
+   3, " - WC_BUTTON"
+   4, " - WC_MENU"
+   5, " - WC_STATIC"
+   6, " - WC_ENTRYFIELD"
+   7, " - WC_LISTBOX"
+   8, " - WC_SCROLLBAR"
+   9, " - WC_TITLEBAR"
+  10, " - WC_MLE"
+   32, " - WC_SPINBUTTON"
+   38, " - WC_SLIDER"
+   39, " - WC_VALUESET"
+   37, " - WC_CONTAINER"
+   40, " - WC_NOTEBOOK"
+   100, " - undocumented"
+
+
+
+    ST_CLASSNAME, "SNOOPER"
+    ST_WINDOWTITLE, "Snooping other windows"
+}
+
+
+

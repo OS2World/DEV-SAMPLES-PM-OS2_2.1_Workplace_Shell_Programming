@@ -1,0 +1,9 @@
+NAME           NEWOPEN windowapi
+DESCRIPTION    'New-style openbox'
+PROTMODE
+HEAPSIZE       12288
+STACKSIZE      20480
+
+EXPORTS
+    ClientWndProc
+

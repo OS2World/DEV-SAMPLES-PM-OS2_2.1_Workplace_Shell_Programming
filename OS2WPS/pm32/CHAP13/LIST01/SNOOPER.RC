@@ -1,0 +1,100 @@
+// SNOOPER.RC
+// Listing 13-01
+
+#include "snooper.h"
+
+ICON RS_ICON SNOOPER.ICO
+BITMAP 100 WPSSNOOP.BMP
+
+
+MENU RS_NEWSYS
+{
+   SUBMENU "#100", 0x8002, MIS_BITMAP
+   {
+       SUBMENU "~Open", MN_OPEN
+       {
+           MENUITEM "Settings", MN_SETTINGS,, MIA_CHECKED
+           MENUITEM "~Icon view", MN_ICONVIEW
+       }
+       SUBMENU "~Help", MN_HELP
+       {
+           MENUITEM "Help ~index", MN_HELP1
+           MENUITEM "~General help", MN_HELP2,, MIA_CHECKED
+           MENUITEM "~Using help", MN_HELP3
+           MENUITEM "~Keys help", MN_HELP4
+       }
+       MENUITEM SEPARATOR
+
+       SUBMENU "~Create another", MN_CREATEANOTHER
+       {
+           MENUITEM "Default", MN_DEFAULT,, MIA_CHECKED
+       }
+       MENUITEM "~Copy...", MN_COPY
+       MENUITEM "~Move...", MN_MOVE
+       MENUITEM "Create ~shadow...", MN_SHADOW
+       MENUITEM "~Delete...", MN_DELETE
+       MENUITEM SEPARATOR
+
+       SUBMENU "Window", MN_WINDOW
+       {
+           MENUITEM "~Restore\tAlt+F5", SC_RESTORE, MIS_SYSCOMMAND
+           MENUITEM "~Move\tAlt+F7", SC_MOVE, MIS_SYSCOMMAND
+           MENUITEM "~Size\tAlt+F8", SC_SIZE, MIS_SYSCOMMAND
+           MENUITEM "Ma~ximize\tAlt+F10", SC_MAXIMIZE, MIS_SYSCOMMAND
+           MENUITEM "~Hide\tAlt+F11", SC_HIDE, MIS_SYSCOMMAND
+           MENUITEM SEPARATOR
+           MENUITEM "~Close\tAlt+F4", SC_CLOSE, MIS_SYSCOMMAND
+           MENUITEM SEPARATOR
+           MENUITEM "Window lis~t\tCtrl+Esc", SC_TASKMANAGER, MIS_SYSCOMMAND
+       }
+       MENUITEM SEPARATOR
+       MENUITEM "Close", SC_CLOSE, MIS_SYSCOMMAND
+   }
+}
+
+
+MENU RS_SNOOP
+{
+    MENUITEM "~Close all", MN_CLOSEALL,, MIA_DISABLED
+    MENUITEM "~Minimize all", MN_MINIMIZEALL,, MIA_DISABLED
+}
+
+MENU RS_WINTREE
+{
+    MENUITEM "~Close all", MN_CLOSEALL,, MIA_DISABLED
+    SUBMENU "~Default tree", MN_DEFTREE
+    {
+        MENUITEM "HWND_DESKTO~P", MN_DESKTOP,, MIA_CHECKED
+        MENUITEM "HWND_OBJEC~T", MN_OBJECT
+    }
+}
+
+
+STRINGTABLE
+{
+   1, " - WC_FRAME"
+   2, " - WC_COMBOBOX"
+   3, " - WC_BUTTON"
+   4, " - WC_MENU"
+   5, " - WC_STATIC"
+   6, " - WC_ENTRYFIELD"
+   7, " - WC_LISTBOX"
+   8, " - WC_SCROLLBAR"
+   9, " - WC_TITLEBAR"
+  10, " - WC_MLE"
+   32, " - WC_SPINBUTTON"
+   38, " - WC_SLIDER"
+   39, " - WC_VALUESET"
+   37, " - WC_CONTAINER"
+   40, " - WC_NOTEBOOK"
+   100, " - undocumented"
+
+
+    ST_CLASSNAME, "WPS_CLASS"
+    ST_SNOOPCLASS, "WPS_SNOOP_CLASS"
+    ST_WINDOWTITLE, "WPS Snoop"
+    ST_DROPINFO, "WPS DROP"
+}
+
+
+

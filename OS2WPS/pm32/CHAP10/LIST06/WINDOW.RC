@@ -1,0 +1,18 @@
+// WINDOW.RC
+//Listing 10-06
+
+#include "window.h"
+
+ICON RS_ICON WINDOW.ICO
+
+MENU RS_MENU
+{
+    SUBMENU "~File", MN_FILE
+    {
+        MENUITEM "E~xit", MN_EXIT
+        MENUITEM SEPARATOR
+        MENUITEM "~Product information", MN_PRODINFO
+    }
+}
+
+

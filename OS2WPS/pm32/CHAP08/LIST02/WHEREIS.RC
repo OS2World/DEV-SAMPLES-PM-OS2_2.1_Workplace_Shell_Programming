@@ -1,0 +1,27 @@
+// WHEREIS.RC
+// Listing 08-02
+
+#include <os2.h>
+#include "whereis.h"
+
+rcinclude whereis.dlg
+ICON RS_ICON whereis.ico
+
+ACCELTABLE RS_ACCELTABLE
+{
+    VK_NEWLINE, ID_SEARCH, VIRTUALKEY
+    VK_ENTER, ID_SEARCH, VIRTUALKEY
+    "S", ID_SEARCH, ALT
+    "s", ID_SEARCH, ALT
+    "Q", ID_QUIT, ALT
+    "q", ID_QUIT, ALT
+    "C", ID_CANCEL, ALT
+    "c", ID_CANCEL, ALT
+    "D", ID_DEL, ALT
+    "d", ID_DEL, ALT
+    "A", ID_DELALL, ALT
+    "a", ID_DELALL, ALT
+}
+
+
+

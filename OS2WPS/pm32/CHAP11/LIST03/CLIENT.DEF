@@ -1,0 +1,17 @@
+NAME CLIENT WINDOWAPI
+
+PROTMODE
+
+DESCRIPTION 'Client DDE application'
+
+CODE PRELOAD MOVEABLE
+DATA PRELOAD
+
+HEAPSIZE    12288
+STACKSIZE   20480
+
+EXPORTS
+    ClientWndProc
+    StockWndProc
+    FrameWndProc
+

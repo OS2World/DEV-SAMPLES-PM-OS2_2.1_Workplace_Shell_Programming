@@ -1,0 +1,22 @@
+// COMBO.RC
+// Listing 07-08
+
+#include "combo.h"
+
+MENU RS_MENU
+{
+    SUBMENU "~File" , MN_FILE
+    {
+        MENUITEM "Show ~combobox" , MN_SHOW
+        MENUITEM SEPARATOR
+        MENUITEM "E~xit", MN_EXIT
+    }
+}
+
+ICON RS_ICON COMBO.ICO
+
+STRINGTABLE
+{
+    ST_CLASSNAME, "COMBO"
+}
+

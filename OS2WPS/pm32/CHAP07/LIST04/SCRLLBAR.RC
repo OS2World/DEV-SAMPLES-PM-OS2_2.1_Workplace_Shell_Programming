@@ -1,0 +1,15 @@
+// SCRLLBAR.RC
+// Listing 07-04
+
+
+#include "scrllbar.h"
+
+ICON RS_ICON    SCRLLBAR.ICO
+
+
+STRINGTABLE
+{
+    ST_CLASSNAME, "SCRLLBAR"
+    ST_WINDOWTITLE, "Changing colors using a scollbar"
+}
+

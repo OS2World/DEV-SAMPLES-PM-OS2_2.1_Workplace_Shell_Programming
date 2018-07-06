@@ -1,0 +1,12 @@
+NAME           WPSFLDR WINDOWAPI
+DESCRIPTION    'A WPS folder'
+PROTMODE
+HEAPSIZE       12288
+STACKSIZE      12288
+
+
+EXPORTS
+FrameWndProc
+ClientWndProc
+
+

@@ -1,0 +1,52 @@
+// VALUESET.RC
+// Listing 07-14
+
+
+#define INCL_WIN
+#include <os2.h>
+#include "valueset.h"
+
+MENU RS_MENU
+{
+    SUBMENU "~File" , MN_FILE
+    {
+        MENUITEM "~New" , MN_NEW
+        MENUITEM "~Open", MN_OPEN
+        MENUITEM "~Save", MN_SAVE,, MIA_DISABLED
+        MENUITEM "Save ~As..." , MN_SAVEAS,, MIA_DISABLED
+        MENUITEM SEPARATOR
+        MENUITEM "E~xit", MN_EXIT
+        MENUITEM "~Product Information", MN_PRODINFO
+    }
+
+    SUBMENU "~Edit" , MN_EDIT
+    {
+        MENUITEM "~Undo\tAlt+Bksp" , MN_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "~Cut\tShift+Del", MN_CUT
+        MENUITEM "Co~py\tShift+Ins", MN_COPY
+        MENUITEM "~Paste\tCtrl+Ins", MN_PASTE
+        MENUITEM "~Delete\tDel" , MN_DELETE
+    }
+}
+
+BITMAP RS_BITMAP VALUESET.BMP
+ICON RS_ICON VALUESET.ICO
+
+
+STRINGTABLE
+{
+    ST_CLASSNAME, "VS"
+    ST_WINDOWTITLE, "Valueset"
+}
+
+
+ACCELTABLE RS_ACCELTABLE
+{
+    VK_DELETE, MN_CUT, VIRTUALKEY, SHIFT
+    VK_BACKSPACE, MN_UNDO, VIRTUALKEY, ALT
+    VK_DELETE, MN_DELETE, VIRTUALKEY
+    VK_INSERT, MN_COPY, VIRTUALKEY, CONTROL
+    VK_INSERT, MN_PASTE, VIRTUALKEY, SHIFT
+}
+

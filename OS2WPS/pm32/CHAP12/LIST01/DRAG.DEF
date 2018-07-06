@@ -1,0 +1,11 @@
+NAME           DRAG WINDOWAPI
+DESCRIPTION    'Dragging example'
+PROTMODE
+HEAPSIZE       12288
+STACKSIZE      20480
+
+EXPORTS
+TitlebarWndProc
+ClientWndProc
+FrameWndProc
+

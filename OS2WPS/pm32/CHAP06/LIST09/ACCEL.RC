@@ -1,0 +1,104 @@
+// ACCEL.RC
+// Listing 06-10
+
+#define INCL_WIN
+#include <os2.h>
+#include "accel.h"
+
+
+ICON RS_ICON ACCEL.ICO
+
+MENU RS_MENU
+{
+    SUBMENU "~File" , MN_FILE
+    {
+        MENUITEM "~New", MN_NEW
+        MENUITEM "~Open", MN_OPEN
+        MENUITEM "~Save", MN_SAVE,, MIA_DISABLED
+        MENUITEM "Save ~As...", MN_SAVEAS,, MIA_DISABLED
+        MENUITEM SEPARATOR
+        MENUITEM "E~xit", MN_EXIT
+    }
+    SUBMENU "~Edit" , MN_EDIT
+    {
+           MENUITEM "~Undo\tAlt+Backspace", MN_UNDO
+           MENUITEM "~Redo\tShift+Alt+backspace", MN_REDO
+           MENUITEM SEPARATOR
+           MENUITEM "Cu~t\tShift+Delete", MN_CUT
+           MENUITEM "~Copy\tCtrl+Insert", MN_COPY
+           MENUITEM "~Paste\tShift+Insert", MN_PASTE
+           MENUITEM SEPARATOR
+           MENUITEM "~Delete\tDelete", MN_DELETE
+           MENUITEM SEPARATOR
+           MENUITEM "~Find...", MN_FIND
+           MENUITEM "~Select all\tCtrl+/", MN_SELECTALL
+           MENUITEM "~Deselect all\tCtrl+\\", MN_DESELECTALL
+    }
+    SUBMENU "~Help", MN_HELP
+    {
+        MENUITEM "Help ~index", MN_HELP1, MIS_HELP
+        MENUITEM "~General help", MN_HELP2, MIS_HELP
+        MENUITEM "~Using help", MN_HELP3, MIS_HELP
+        MENUITEM "~Keys help", MN_HELP4, MIS_HELP
+        MENUITEM SEPARATOR
+        MENUITEM "~Product information", MN_PRODINFO
+    }
+}
+
+MENU RS_SECOND
+{
+    SUBMENU "~Help", MN_HELP
+    {
+        MENUITEM "Help ~index", MN_HELP1, MIS_HELP
+        MENUITEM "~General help", MN_HELP2, MIS_HELP
+        MENUITEM "~Using help", MN_HELP3, MIS_HELP
+        MENUITEM "~Keys help", MN_HELP4, MIS_HELP
+        MENUITEM SEPARATOR
+        MENUITEM "~Product information", MN_PRODINFO
+    }
+    SUBMENU "~Edit" , MN_EDIT
+    {
+           MENUITEM "~Undo\tAlt+Backspace", MN_UNDO
+           MENUITEM "~Redo\tShift+Alt+backspace", MN_REDO
+           MENUITEM SEPARATOR
+           MENUITEM "Cu~t\tShift+Delete", MN_CUT
+           MENUITEM "~Copy\tCtrl+Insert", MN_COPY
+           MENUITEM "~Paste\tShift+Insert", MN_PASTE
+           MENUITEM SEPARATOR
+           MENUITEM "~Delete\tDelete", MN_DELETE
+           MENUITEM SEPARATOR
+           MENUITEM "~Find...", MN_FIND
+           MENUITEM "~Select all\tCtrl+/", MN_SELECTALL
+           MENUITEM "~Deselect all\tCtrl+\\", MN_DESELECTALL
+    }
+    SUBMENU "~File" , MN_FILE
+    {
+        MENUITEM "~Back", MN_BACK
+        MENUITEM "~Open", MN_OPEN
+        MENUITEM "~Save", MN_SAVE,, MIA_DISABLED
+        MENUITEM "Save ~As...", MN_SAVEAS,, MIA_DISABLED
+        MENUITEM SEPARATOR
+        MENUITEM "E~xit", MN_EXIT
+    }
+}
+
+
+ACCELTABLE RS_ACCELTABLE
+{
+    VK_BACKSPACE,   MN_UNDO,        VIRTUALKEY, ALT
+    VK_BACKSPACE,   MN_REDO,        VIRTUALKEY, ALT, SHIFT
+    VK_DELETE,      MN_CUT,         VIRTUALKEY, SHIFT
+    VK_INSERT,      MN_COPY,        VIRTUALKEY, CONTROL
+    VK_INSERT,      MN_PASTE,       VIRTUALKEY, SHIFT
+    VK_DELETE,      MN_DELETE,      VIRTUALKEY
+    "/",            MN_SELECTALL,   CHAR, CONTROL
+    "\\",           MN_DESELECTALL, CHAR, CONTROL
+}
+
+
+STRINGTABLE
+{
+    ST_CLASSNAME, "ACCEL"
+    ST_WINDOWTITLE, "Adding accelerators"
+}
+

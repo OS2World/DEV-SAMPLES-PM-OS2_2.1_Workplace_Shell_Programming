@@ -1,0 +1,45 @@
+DLGINCLUDE 1 "DIALOG.H"
+
+DLGTEMPLATE DID_OK LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", DID_OK, 320, 40, 120, 16, FS_NOBYTEALIGN | NOT FS_DLGBORDER | 
+            FS_BORDER | WS_VISIBLE
+    BEGIN
+        ENTRYFIELD      "", DID_CANCEL, 4, 4, 78, 8, ES_MARGIN | NOT 
+                        WS_TABSTOP
+        DEFPUSHBUTTON   "~OK", DID_OK, 86, 2, 28, 12, NOT WS_TABSTOP
+    END
+END
+
+DLGTEMPLATE 256 LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", 256, 30, 20, 316, 105, FS_NOBYTEALIGN | WS_VISIBLE
+    BEGIN
+        LTEXT           "Menuitem", DL_ITEMTEXT, 9, 51, 44, 8
+        ENTRYFIELD      "", DL_ITEM, 67, 50, 110, 8, NOT ES_AUTOSCROLL | 
+                        ES_MARGIN
+        ENTRYFIELD      "", DL_ACC, 67, 35, 111, 8, NOT ES_AUTOSCROLL | 
+                        ES_MARGIN
+        GROUPBOX        "Menuitem type", 257, 9, 64, 170, 34
+        AUTORADIOBUTTON "Top-level", DL_TOP, 17, 79, 58, 10, 
+                        BS_NOPOINTERFOCUS | WS_GROUP | WS_TABSTOP
+        AUTORADIOBUTTON "Drop-down", DL_DROP, 104, 79, 64, 10, 
+                        BS_NOPOINTERFOCUS | WS_TABSTOP
+        AUTORADIOBUTTON "SubMenu", DL_SUBMENU, 17, 67, 57, 10, 
+                        BS_NOPOINTERFOCUS | WS_TABSTOP
+        AUTORADIOBUTTON "Separator", DL_SEPARATOR, 104, 67, 60, 10, 
+                        BS_NOPOINTERFOCUS | WS_TABSTOP
+        LTEXT           "Accelerator", DL_ACCTEXT, 9, 36, 48, 8
+        LTEXT           "Top levels:", 263, 187, 55, 46, 8
+        LISTBOX         DL_LIST, 187, 5, 96, 49, WS_GROUP
+        DEFPUSHBUTTON   "~Add item", DL_ENTER, 190, 85, 54, 13, WS_GROUP
+        PUSHBUTTON      "~Terminate", DL_TERMINATE, 255, 85, 54, 13
+        PUSHBUTTON      "~Cancel", DID_CANCEL, 255, 65, 54, 13
+        GROUPBOX        "Attributes", 256, 5, 5, 175, 27
+        AUTOCHECKBOX    "Ellipsis", DL_EXTCMD, 11, 10, 45, 10, WS_GROUP | 
+                        WS_DISABLED
+        AUTOCHECKBOX    "Disabled", DL_DISABLED, 60, 10, 54, 10, WS_DISABLED
+        AUTOCHECKBOX    "Checked", DL_CHECKED, 121, 10, 50, 10, WS_DISABLED
+    END
+END
+

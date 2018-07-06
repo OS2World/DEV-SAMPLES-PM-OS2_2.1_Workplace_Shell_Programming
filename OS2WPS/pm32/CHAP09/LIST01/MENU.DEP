@@ -1,0 +1,38 @@
+# IBM Developer's Workframe/2 Make File Creation run at 00:16:44 on 07/26/93
+
+# Make File Creation run in directory:
+#   F:\PM32\CHAP09\LIST01;
+
+# Assumed INCLUDE environment variable path:
+#   F:\TOOLKT21\C\OS2H;
+#   F:\TOOLKT21\ASM\OS2INC;
+#   F:\IBMCPP\INCLUDE;
+#   F:\IBMCPP\IBMCLASS;
+
+
+INCLUDE002=.
+INCLUDE002=$(INCLUDE002);$(INCLUDE)
+
+INCLUDE001=.
+INCLUDE001=$(INCLUDE001);$(INCLUDE)
+
+INCLUDE000=$(INCLUDE)
+
+
+MENU.RES:  MENU.RC  \
+#  {$(INCLUDE002)}OS2.H  \
+   {$(INCLUDE002)}MENU.H  \
+   {$(INCLUDE002)}DIALOG.H  \
+   MENU.DLG  \
+     DIALOG.H  \
+   MENU.ICO  \
+   MENU.MAK
+
+MENU.OBJ:  MENU.C  \
+#  {$(INCLUDE000)}os2.h  \
+#  {$(INCLUDE000)}ctype.h  \
+#  {$(INCLUDE000)}string.h  \
+#  {$(INCLUDE000)}stdio.h  \
+   {$(INCLUDE001)}menu.h  \
+   {$(INCLUDE001)}dialog.h  \
+   MENU.MAK

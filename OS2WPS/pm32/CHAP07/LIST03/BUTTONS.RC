@@ -1,0 +1,15 @@
+// BUTTONS.RC
+// Listing 07-02
+
+
+#include "buttons.h"
+
+ICON RS_ICON    BUTTONS.ICO
+
+
+STRINGTABLE
+{
+    ST_CLASSNAME, "BUTTONS"
+    ST_WINDOWTITLE, "A button in the client window"
+}
+

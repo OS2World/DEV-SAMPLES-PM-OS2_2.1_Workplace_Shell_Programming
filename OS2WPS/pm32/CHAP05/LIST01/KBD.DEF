@@ -1,0 +1,10 @@
+NAME           KBD
+DESCRIPTION    'Keyboard input'
+PROTMODE
+
+HEAPSIZE       12288
+STACKSIZE      12288
+
+EXPORTS
+    ClientWndProc
+

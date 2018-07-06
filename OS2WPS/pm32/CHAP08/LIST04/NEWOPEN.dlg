@@ -1,0 +1,14 @@
+
+DLGTEMPLATE 401 LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Product information", 401, 60, 64, 177, 41, FS_NOBYTEALIGN, 
+            FCF_TITLEBAR
+    BEGIN
+        CONTROL         RS_BITMAP, 0, 2, 10, 22, 19, WC_STATIC, SS_BITMAP |
+                        WS_VISIBLE
+        LTEXT           "IBM OS/2 2.1 PM Programming", -1, 38, 24, 134, 8
+        LTEXT           "Stefano Maruzzi 1993", -1, 38, 10, 93, 8
+        DEFPUSHBUTTON   "~Ok", DID_OK, 131, 9, 40, 12, WS_GROUP
+    END
+END
+

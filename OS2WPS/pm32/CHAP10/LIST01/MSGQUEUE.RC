@@ -1,0 +1,22 @@
+// MSGQUEUE.RC
+// Lisiting 10-01
+
+#include "msgqueue.h"
+
+ICON RS_ICON    MSGQUEUE.ICO
+
+STRINGTABLE
+{
+    0x001, "QS_KEY"
+    0x002, "QS_MOUSEBUTTON"
+    0x004, "QS_MOUSEMOVE"
+    0x008, "QS_MOUSE"
+    0x010, "QS_TIMER"
+    0x020, "QS_PAINT"
+    0x040, "QS_POSTMSG"
+    0x080, "QS_SEM1"
+    0x100, "QS_SEM2"
+    0x200, "QS_SEM3"
+    0x400, "QS_SEM4"
+}
+

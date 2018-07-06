@@ -1,0 +1,10 @@
+NAME           FLOW
+DESCRIPTION    'Trapping the flow of messages'
+PROTMODE
+HEAPSIZE       12288
+STACKSIZE      20480
+
+EXPORTS
+ClientWndProc
+TestWndProc
+

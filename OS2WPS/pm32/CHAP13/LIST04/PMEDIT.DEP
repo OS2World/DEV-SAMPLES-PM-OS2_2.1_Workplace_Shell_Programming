@@ -1,0 +1,55 @@
+# IBM Developer's Workframe/2 Make File Creation run at 08:26:07 on 07/27/93
+
+# Make File Creation run in directory:
+#   F:\PM32\CHAP13\LIST04;
+
+# Assumed INCLUDE environment variable path:
+#   F:\TOOLKT21\C\OS2H;
+#   F:\TOOLKT21\ASM\OS2INC;
+#   F:\IBMCPP\INCLUDE;
+#   F:\IBMCPP\IBMCLASS;
+
+
+INCLUDE002=.
+INCLUDE002=$(INCLUDE002);$(INCLUDE)
+
+INCLUDE001=.
+INCLUDE001=$(INCLUDE001);$(INCLUDE)
+
+INCLUDE000=$(INCLUDE)
+
+
+PMEDIT.RES:  PMEDIT.RC  \
+#  {$(INCLUDE002)}OS2.H  \
+   {$(INCLUDE002)}PMEDIT.H  \
+     {$(INCLUDE002)}DIALOGS.H  \
+   PMEDIT.ICO  \
+   PMEDIT.BMP  \
+   PMEDIT.DLG  \
+#    {$(INCLUDE002)}DIALOGS.H  \
+#  PMEDIT.ICO  \
+   PMEDIT.MAK
+
+GOTO.OBJ:  GOTO.C  \
+#  {$(INCLUDE000)}os2.h  \
+#  {$(INCLUDE000)}stdio.h  \
+#  {$(INCLUDE000)}stdlib.h  \
+   {$(INCLUDE001)}pmedit.h  \
+     {$(INCLUDE001)}dialogs.h  \
+   PMEDIT.MAK
+
+PMEDIT.OBJ:  PMEDIT.C  \
+#  {$(INCLUDE000)}os2.h  \
+#  {$(INCLUDE000)}stdio.h  \
+#  {$(INCLUDE000)}string.h  \
+   {$(INCLUDE001)}pmedit.h  \
+     {$(INCLUDE001)}dialogs.h  \
+   {$(INCLUDE001)}mie02.h  \
+   PMEDIT.MAK
+
+SEARCH.OBJ:  SEARCH.C  \
+#  {$(INCLUDE000)}os2.h  \
+   {$(INCLUDE001)}pmedit.h  \
+     {$(INCLUDE001)}dialogs.h  \
+   PMEDIT.MAK
+

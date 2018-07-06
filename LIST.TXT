@@ -1,0 +1,91 @@
+OS/2 2.1 Workplace Shell Programming
+Stefano Maruzzi - Random House 1993
+
+Book listings
+
+2.1 MACHINE.MAK Sample make file
+2.2 MACHINE.MAK Sample make file create by C Set++
+2.3 MACHINE.DEF Typical definition file for OS/2
+2.4 TRANSFRM Sample resource and header file
+2.6 MAIN.C Sample main() function
+2.7 MACHINE.MAK Working make file
+2.8 MACHINE.DEF Working defition file
+2.9 MACHINE Basic PM application with no painting
+3.3 ERASE Basic PM application
+3.4 SHOW Use of WinShowWIndow()
+3.5 CREATE Intercepting WM_CREATE
+3.6 CLIENTCL Changing the client window color after re-sizing or activation
+3.7 PAINT Painting example
+4.1 PARENT Parent/son window created with WinCreateStdWindow()
+4.2 OWNER Shows owner/owned relationship
+4.3 MDI Parent/son window created with WinCreateWindow()
+4.4 STORE Stores window position
+4.5 TWOWND Use of a predefined window (mle) overlapping the client
+4.6 CLCOLOR Changing the Window List content
+4.7 ENUM Windows enumeration
+4.8 BROADCST Message broadcasting
+4.9 SETFOCUS Intercepting the focus chain
+5.1 KBD Keyboard input
+5.2 MOUSE Mouse coordinates
+5.3 TIMER Timer example
+5.4 WINTMP Template window
+5.5 ICON Icon
+5.6 SYSBMP Predefined bitmaps & pointers
+5.7 ICONDRAG Icon dragging
+5.8 BITMAP Bitmap dragging
+5.9 ASSOCT Association table
+6.3 MENUAPP Application with a menu
+6.4 MENUAPP Trapping the menuitem selection source
+6.5 MENUAPP Changing menuitems attributes
+6.6 TWOMENUS Loading a second menu during execution
+6.7 TWOMENUS Two menus loaded at start up
+6.8 BMPMENU Bitmap menuitems
+6.9 ACCEL Menuitem accelerators
+6.10 RTMENU Run-time menu
+6.11 CNTXT Window context menu
+7.1 SNOOPER Snooping other windows
+7.2 BUTTONS Some buttons
+7.3 BUTTONS A button in the application window client
+7.4 SCRLLBAR Using a scrollbar to change window colors
+7.5 LISTBOX Using a listbox
+7.6 FLOW Examining the flow of messages
+7.7 ODLIST Owner-draw listbox
+7.8 ENTRY Entryfield example
+7.9 COMBO Combobox example
+7.10 NOTEBOOK Notebook example
+7.11 FOLDER Container example
+7.12 SLIDER Slider example
+7.13 SPIN Spinbutton example
+7.14 VALUESET Valueset example
+8.1 PRESPARAM Presentation parameters
+8.2 WHEREIS Find utility
+8.3 OLDOPEN Old fashion open box
+8.4 NEWOPEN New fashion open box
+8.5 MODELESS Modeless window
+9.1 MENU Menu maker
+9.2 SNOOPER Snooper 2
+9.3 SNOOPER High priority Snooper
+9.4 WHEREIS Multithreaded version
+10.1 MSGQUEUE Exploring the message queue
+10.2 SUBCLASS Subclassing example
+10.3 SUPERCLS Superclassing example
+10.4 BORDER Using a function from a DLL
+10.5 MIE01 Sample DLL used in the previous example
+10.6 WINDOW Explicitly loading a DLL
+10.7 MIE02 Sample DLL used in the previous example
+10.8 SYSDLLS Adds/removes a DLL from OS2.INI
+10.9 MIECC Custom control
+10.10 USECTL Application exploiting the MIECC custom control
+11.1 CLIPPUT Inserting text in the Clipboard
+11.2 CLIPSHOW Getting text from the Clipboard
+11.3 CLIENT DDE client
+11.4 SERVER DDE server
+12.1 DRAG Titlebar dragging
+12.2 DROP Accepting data by drag & drop
+12.3 PANEL Panel window
+12.4 WPSFLDR Drag & drop inside a folder
+13.1 SNOOPER Snoop WPS
+13.2 CLASSES WPS Classes
+13.3 INSTALL WPS install
+13.4 PMEDIT PM EDIT
+

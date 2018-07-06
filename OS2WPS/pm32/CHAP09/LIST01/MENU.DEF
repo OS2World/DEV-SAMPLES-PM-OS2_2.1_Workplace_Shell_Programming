@@ -1,0 +1,11 @@
+NAME            MENU  windowapi
+DESCRIPTION    'Menu Maker'
+PROTMODE
+HEAPSIZE       12288
+STACKSIZE      20480
+
+EXPORTS
+    ClientWndProc
+    MenuDlgProc
+    Project
+

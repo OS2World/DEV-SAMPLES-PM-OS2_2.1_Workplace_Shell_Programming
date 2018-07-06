@@ -1,0 +1,21 @@
+// PRESPAR.RC
+// Listing 08-01
+
+#define INCL_WIN
+#define INCL_GPI
+
+#include <os2.h>
+#include "mie02.h"
+
+
+ICON RS_INSTFOLD INSTFOLD.ICO
+ICON RS_ICON MIE02.ICO
+
+// Product information dialog template
+rcinclude mie02.dlg
+
+STRINGTABLE
+{
+    ST_CLASSNAME, "TWENY"
+}
+

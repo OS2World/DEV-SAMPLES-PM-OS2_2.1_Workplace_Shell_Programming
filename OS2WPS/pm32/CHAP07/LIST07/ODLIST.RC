@@ -1,0 +1,31 @@
+// ODLIST.RC
+// Listing 07-07
+
+#define INCL_WIN
+#include <os2.h>
+#include "odlist.h"
+
+POINTER RS_ICON ODLIST.ICO
+
+BITMAP 101 show.bmp
+BITMAP 100 hide.bmp
+
+MENU RS_MENU
+{
+    SUBMENU "~Action", MN_TOP
+    {
+        MENUITEM "Show ~documents", MN_DIALOG
+        MENUITEM SEPARATOR
+        MENUITEM "E~xit", MN_EXIT
+    }
+}
+
+STRINGTABLE
+{
+    ST_CLASSNAME, "ODLIST"
+    ST_CHILDCLASS, "CHILD"
+    ST_WINDOWTITLE, "Owner-draw listbox"
+}
+
+
+

@@ -1,0 +1,10 @@
+NAME            WINTMP
+DESCRIPTION     'A window from a template'
+PROTMODE
+
+HEAPSIZE       12288
+STACKSIZE      20480
+
+EXPORTS
+    ClientWndProc
+
